@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
+/*
+ * Método que se encarga de leer el archivo de números y los almacena en un array de tipo long.
+*/
 int leerArchivo(long * numeros)
 {
    long index = 0;
@@ -18,6 +20,9 @@ int leerArchivo(long * numeros)
    return 0;
 }
 
+/*
+ * Método que se encarga de ordenar los números del arreglo de numeros de menor a mayor.
+*/
 int ordenarArreglo(long * numeros, long tamanioArreglo)
 {
    long temp, i, j, k;
@@ -36,7 +41,14 @@ int ordenarArreglo(long * numeros, long tamanioArreglo)
    return 0;
 }
 
-
+/*
+ * Método que se encarga de repartir los números en las distintas cajas. Para esto se reparte el array de números
+ * que ya ha sido ordenado de menor a mayor anteriormente y se reparten primero los números más grandes, o sea de 
+ * atras para delante. Los tres primeros números en cada caja se hacen de manera manual, esto es los tres números 
+ * mas grandes se asignan a A, B y C respectivamente. Despues cada nuevo número que se extraiga del array se colocará 
+ * en la caja cuya suma total sea la mas baja. 
+ * Se continua de esta manera hasta que se acaben los números.
+*/
 int repartirNumeros(long * numeros,long * cajaA,long * cajaB,long * cajaC, long * sumas)
 {
    long sumaA = 0;
@@ -91,6 +103,9 @@ int repartirNumeros(long * numeros,long * cajaA,long * cajaB,long * cajaC, long 
    return 0;
 } 
 
+/*
+ * Método que se encarga de escribir el archivo de salida con todo lo que se pide en la especificación de la tarea.
+*/
 int escribirArchivo(long * sumas, long diferencia, double diferencia_div, long * cajaA,long * cajaB,long * cajaC)
 {
    FILE * archivo_respuesta = fopen("salida.txt","w");
@@ -139,42 +154,32 @@ int escribirArchivo(long * sumas, long diferencia, double diferencia_div, long *
    return 0;
 }
 
+/*
+ * Funcion main con la logica general del programa, realiza llamados a distintos metodos.
+*/
 int main(int argc, char const *argv[])
 {
-   //Arreglos para guardar los valores de cada caja y los leidos del archivo
+   //Arreglos para guardar los valores de cada caja y los numeros leidos del archivo
    long numeros[10000] = {0};
    long cajaA[10000] = {0};
    long cajaB[10000] = {0};
    long cajaC[10000] = {0};
    long sumas[3] = {0};
-   //long sumaA, sumaB,sumaC;
-	leerArchivo(numeros);
-   
-   /*for (long i = 0; i < 10000; i++)
-   {
-      printf("%ld\n", numeros[i]);
-   }*/
 
+   //Leemos el archivo y guardamos los valores.
+	leerArchivo(numeros);
    //1. Acomodar los numeros de mayor al menor 
    ordenarArreglo(numeros, 10000);
-   /*for (long i = 0; i < 10000; i++)
-   {
-      printf("%ld\n", numeros[i]);
-   }*/
    //2. Repartir los numeros dando al grupo con la menor suma el siguiente numero mas grande del arreglo ordenado.
    repartirNumeros(numeros,cajaA,cajaB,cajaC,sumas);
    //3. Comparar las diferencias de los grupos
-
    printf("El valor de la cajaA fue de: %ld\n", sumas[0]);
    printf("El valor de la cajaB fue de: %ld\n", sumas[1]);
    printf("El valor de la cajaC fue de: %ld\n", sumas[2]);
-
    long diferencia = pow((sumas[0]- sumas[1]),2) + pow((sumas[0]-sumas[2]),2) +pow((sumas[1]-sumas[2]),2);
    double diferencia_div = diferencia / pow(10,12);
    printf("La diferencia es: %ld\n", diferencia );
    printf("La diferencia al dividirla por 10^12 es: %f\n", diferencia_div );
-
-
    //4. Escritura del archivo de salida
    escribirArchivo(sumas, diferencia, diferencia_div, cajaA, cajaB, cajaC);
 
