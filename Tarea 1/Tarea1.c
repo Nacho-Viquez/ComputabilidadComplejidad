@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int leerArchivo(long * numeros)
 {
@@ -90,6 +91,53 @@ int repartirNumeros(long * numeros,long * cajaA,long * cajaB,long * cajaC, long 
    return 0;
 } 
 
+int escribirArchivo(long * sumas, long diferencia, double diferencia_div, long * cajaA,long * cajaB,long * cajaC)
+{
+   FILE * archivo_respuesta = fopen("salida.txt","w");
+   int indexCajas = 0;
+   //Manejo de errores 
+   if(archivo_respuesta == NULL)
+   {
+      printf("Error al crear el archivo_respuesta!");   
+      exit(1);             
+   }
+   fprintf(archivo_respuesta,"----Estudiante: Jose Ignacio Viquez Rojas B78451, Tarea 1----\n");
+   fprintf(archivo_respuesta,"Evaluaciones: 1\n");
+   fprintf(archivo_respuesta,"------Sumas optenidas------\n");
+   fprintf(archivo_respuesta,"Suma de la cajaA:%ld\n", sumas[0]);
+   fprintf(archivo_respuesta,"Suma de la cajaB:%ld\n", sumas[1]);
+   fprintf(archivo_respuesta,"Suma de la cajaC:%ld\n", sumas[2]);
+   fprintf(archivo_respuesta,"Diferencia(f): %ld\n",diferencia);
+   fprintf(archivo_respuesta,"Diferencia al dividirla entre 10^12(f): %f\n",diferencia_div);
+   fprintf(archivo_respuesta,"Asignaciones de los numeros:\n");
+
+   fprintf(archivo_respuesta,"------CajaA------\n");   
+   while(cajaA[indexCajas]!= 0){
+      //printf("indexCajas: %i\n",indexCajas);
+      fprintf(archivo_respuesta,"%ld\n",cajaA[indexCajas]);
+      indexCajas++;
+   }
+
+   indexCajas = 0;
+   fprintf(archivo_respuesta,"------CajaB-----\n");   
+   while(cajaB[indexCajas]!= 0){
+      //printf("indexCajas: %i\n",indexCajas);
+      fprintf(archivo_respuesta,"%ld\n",cajaB[indexCajas]);
+      indexCajas++;
+   }
+
+   indexCajas = 0;
+   fprintf(archivo_respuesta,"------CajaC-----\n");   
+   while(cajaC[indexCajas]!= 0){
+      //printf("indexCajas: %i\n",indexCajas);
+      fprintf(archivo_respuesta,"%ld\n",cajaC[indexCajas]);
+      indexCajas++;
+   }
+
+
+   fclose(archivo_respuesta);
+   return 0;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -117,13 +165,18 @@ int main(int argc, char const *argv[])
    repartirNumeros(numeros,cajaA,cajaB,cajaC,sumas);
    //3. Comparar las diferencias de los grupos
 
-
    printf("El valor de la cajaA fue de: %ld\n", sumas[0]);
    printf("El valor de la cajaB fue de: %ld\n", sumas[1]);
    printf("El valor de la cajaC fue de: %ld\n", sumas[2]);
 
+   long diferencia = pow((sumas[0]- sumas[1]),2) + pow((sumas[0]-sumas[2]),2) +pow((sumas[1]-sumas[2]),2);
+   double diferencia_div = diferencia / pow(10,12);
+   printf("La diferencia es: %ld\n", diferencia );
+   printf("La diferencia al dividirla por 10^12 es: %f\n", diferencia_div );
 
-   //4. Fin ? 
+
+   //4. Escritura del archivo de salida
+   escribirArchivo(sumas, diferencia, diferencia_div, cajaA, cajaB, cajaC);
 
 	return 0;
 }
