@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 /*
  * Método que se encarga de leer el archivo de números y los almacena en un array de tipo long.
 */
@@ -106,7 +107,7 @@ int repartirNumeros(long * numeros,long * cajaA,long * cajaB,long * cajaC, long 
 /*
  * Método que se encarga de escribir el archivo de salida con todo lo que se pide en la especificación de la tarea.
 */
-int escribirArchivo(long * sumas, long diferencia, double diferencia_div, long * cajaA,long * cajaB,long * cajaC)
+int escribirArchivo(long * sumas, long diferencia,long double diferencia_div, long * cajaA,long * cajaB,long * cajaC)
 {
    FILE * archivo_respuesta = fopen("salida.txt","w");
    int indexCajas = 0;
@@ -123,7 +124,7 @@ int escribirArchivo(long * sumas, long diferencia, double diferencia_div, long *
    fprintf(archivo_respuesta,"Suma de la cajaB:%ld\n", sumas[1]);
    fprintf(archivo_respuesta,"Suma de la cajaC:%ld\n", sumas[2]);
    fprintf(archivo_respuesta,"Diferencia(f): %ld\n",diferencia);
-   fprintf(archivo_respuesta,"Diferencia al dividirla entre 10^12(f): %f\n",diferencia_div);
+   fprintf(archivo_respuesta,"Diferencia al dividirla entre 10^12(f): %Lf\n",diferencia_div);
    fprintf(archivo_respuesta,"Asignaciones de los numeros:\n");
 
    fprintf(archivo_respuesta,"------CajaA------\n");   
@@ -165,21 +166,34 @@ int main(int argc, char const *argv[])
    long cajaB[10000] = {0};
    long cajaC[10000] = {0};
    long sumas[3] = {0};
+   clock_t inicio, fin;
+   long double duracionPrograma;
 
    //Leemos el archivo y guardamos los valores.
 	leerArchivo(numeros);
+
+   //Iniciamos reloj 
+   inicio = clock();
+
    //1. Acomodar los numeros de mayor al menor 
    ordenarArreglo(numeros, 10000);
+
    //2. Repartir los numeros dando al grupo con la menor suma el siguiente numero mas grande del arreglo ordenado.
    repartirNumeros(numeros,cajaA,cajaB,cajaC,sumas);
+
    //3. Comparar las diferencias de los grupos
    printf("El valor de la cajaA fue de: %ld\n", sumas[0]);
    printf("El valor de la cajaB fue de: %ld\n", sumas[1]);
    printf("El valor de la cajaC fue de: %ld\n", sumas[2]);
    long diferencia = pow((sumas[0]- sumas[1]),2) + pow((sumas[0]-sumas[2]),2) +pow((sumas[1]-sumas[2]),2);
-   double diferencia_div = diferencia / pow(10,12);
+   long double diferencia_div = diferencia / pow(10,12);
    printf("La diferencia es: %ld\n", diferencia );
-   printf("La diferencia al dividirla por 10^12 es: %f\n", diferencia_div );
+   printf("La diferencia al dividirla por 10^12 es: %Lf\n", diferencia_div );
+
+   //Fin del algoritmo
+   fin = clock();
+   duracionPrograma = ((double) (fin - inicio))/CLOCKS_PER_SEC; //Formula tomada de: https://www.geeksforgeeks.org/how-to-measure-time-taken-by-a-program-in-c/
+   printf("La duracion del programa fue: %Lf\n", duracionPrograma);
    //4. Escritura del archivo de salida
    escribirArchivo(sumas, diferencia, diferencia_div, cajaA, cajaB, cajaC);
 
