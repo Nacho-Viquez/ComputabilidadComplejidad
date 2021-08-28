@@ -187,8 +187,8 @@ int main(int argc, char const *argv[])
    printf("El valor de la cajaC fue de: %ld\n", sumas[2]);
    long diferencia = pow((sumas[0]- sumas[1]),2) + pow((sumas[0]-sumas[2]),2) +pow((sumas[1]-sumas[2]),2);
    long double diferencia_div = diferencia / pow(10,12);
-   printf("La diferencia es: %ld\n", diferencia );
-   printf("La diferencia al dividirla por 10^12 es: %Lf\n", diferencia_div );
+   //printf("La diferencia es: %ld\n", diferencia );
+   //printf("La diferencia al dividirla por 10^12 es: %Lf\n", diferencia_div );
 
    //Fin del algoritmo
    fin = clock();
