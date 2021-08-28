@@ -42,7 +42,8 @@ int ordenarArreglo(long * numeros, long tamanioArreglo)
    return 0;
 }
 
-/*
+/* 
+ * ESTE METODO NO SE USA FUE UNA VERSION EXPERIMENTAL
  * Método que se encarga de repartir los números en las distintas cajas. Para esto se reparte el array de números
  * que ya ha sido ordenado de menor a mayor anteriormente y se reparten primero los números más grandes, o sea de 
  * atras para delante. Los tres primeros números en cada caja se hacen de manera manual, esto es los tres números 
@@ -104,10 +105,163 @@ int repartirNumeros(long * numeros,long * cajaA,long * cajaB,long * cajaC, long 
    return 0;
 } 
 
+
+/*
+ * Método que se encarga de repartir los números del arreglo ordenados de menor a mayor de manera aleatoria entre las 3 cajas y compara 
+ * en cada evaluación la diferencia y en caso de haber encontrado una diferencia que es mas pequeña que la anterior mas pequeña
+ * la almacena. 
+ * Se detiene cuando se encuentra una diferencia menor a 0 o cuando se realizan 10 millones de ejecuciones.
+*/
+int repartirNumerosAleatorio(long * numeros,long * cajaA,long * cajaB,long * cajaC, long * sumas)
+{
+   double menorDiferenciaEncontrada = 9999999;
+   int indexMasGrande = 0;
+   long sumaA = 0;
+   long sumaB = 0;
+   long sumaC = 0;
+   long indiceA = 0;
+   long indiceB = 0;
+   long indiceC = 0;
+
+   //Numero maximo de evaluaciones
+   int i ;
+   for (i = 0; i < 10000000; ++i)
+   {
+      //Reiniciar los valores de los indices.
+      sumaA = 0;
+      sumaB = 0;
+      sumaC = 0;
+      indiceA = 0; 
+      indiceB = 0;
+      indiceC = 0;
+      long cajaA_Temp[10000] = {0};
+      long cajaB_Temp[10000] = {0};
+      long cajaC_Temp[10000] = {0};
+
+
+      //Repartir los numeros de manera aleatoria 
+      for (int j = 9999; j >= 0; j--)
+      {
+         //Repartir numero aleatoriamente entre los dos mas pequeños
+         if (indexMasGrande == 0){
+            //Entre los 3
+            int num = rand();
+            num = num %3;
+            if(num == 0){
+               //Se lo sumamos a la cajaA
+               cajaA_Temp[indiceA] = numeros[j];
+               indiceA++;
+               sumaA += numeros[j]; //Sumamos el numero
+            }else if (num == 1){
+               //Se lo sumamos a la cajaB
+               cajaB_Temp[indiceB] = numeros[j];
+               indiceB++;
+               sumaB += numeros[j]; //Sumamos el numero
+            }else if (num == 2){
+               //Se lo sumamos a la cajaC
+               cajaC_Temp[indiceC] = numeros[j];
+               indiceC++;
+               sumaC += numeros[j]; //Sumamos el numero
+            }
+
+         }else if(indexMasGrande == 1){
+            //La suma mas grande es la de la caja A, meter el valor en B o C 
+            int num = rand();
+            num = num %2;
+            if(num == 0){
+               //Sumarlo a B
+               cajaB_Temp[indiceB] = numeros[j];
+               indiceB++;
+               sumaB += numeros[j]; //Sumamos el numero
+            }else if (num == 1){
+               //Sumarlo a C
+               cajaC_Temp[indiceC] = numeros[j];
+               indiceC++;
+               sumaC += numeros[j]; //Sumamos el numero
+            }
+
+         }else if(indexMasGrande == 2){
+            //La suma mas grande es la de la caja B, meter el valor en A o C 
+            int num = rand();
+            num = num %2;
+            if(num == 0){
+               //Sumarlo a A
+               cajaA_Temp[indiceA] = numeros[j];
+               indiceA++;
+               sumaA += numeros[j]; //Sumamos el numero
+            }else if (num == 1){
+               //Sumarlo a C
+               cajaC_Temp[indiceC] = numeros[j];
+               indiceC++;
+               sumaC += numeros[j]; //Sumamos el numero
+            }            
+
+         }else if(indexMasGrande == 3){
+            //La suma mas grande es la de la caja C, meter el valor en B o A 
+            int num = rand();
+            num = num %2;
+            if(num == 0){
+               //Sumarlo a B
+               cajaB_Temp[indiceB] = numeros[j];
+               indiceB++;
+               sumaB += numeros[j]; //Sumamos el numero
+            }else if (num == 1){
+               //Sumarlo a A
+               cajaA_Temp[indiceA] = numeros[j];
+               indiceA++;
+               sumaA += numeros[j]; //Sumamos el numero
+            }
+         }
+
+         //Poner la nueva suma mas alta
+         if((sumaA >= sumaB) && (sumaA >= sumaC)){
+            //A es la nueva suma mas alta
+            //printf("El mas grande fue A\n");
+            indexMasGrande = 1;
+         }else if((sumaB >= sumaA) && (sumaB >= sumaC)){
+            //B es la nueva suma mas alta
+            //printf("El mas grande fue B\n");
+            indexMasGrande = 2;
+
+         }else if((sumaC >= sumaB) && (sumaC >= sumaA)){
+            //C es la nueva suma mas alta
+            //printf("El mas grande fue C\n");
+            indexMasGrande = 3;
+
+         }else{
+            //Caso en que algunos sean iguales
+            printf("IGuales?...\n");
+         }
+      }
+
+      //Calcular la diferencia entre las sumas 
+      long diferencia = pow((sumaA- sumaB),2) + pow((sumaA-sumaC),2) +pow((sumaB-sumaC),2);
+      long double diferencia_div = diferencia / pow(10,12);
+      
+      if (menorDiferenciaEncontrada > diferencia){
+         menorDiferenciaEncontrada = diferencia;
+         //printf("La diferencia es: %ld\n", diferencia );
+      }
+      
+      if(menorDiferenciaEncontrada < 10){
+         sumas[0]= sumaA;
+         sumas[1]= sumaB;
+         sumas[2]= sumaC;
+         cajaA = cajaA_Temp;
+         cajaB = cajaB_Temp;
+         cajaC = cajaC_Temp;
+         break;
+      }
+   }
+   return i-1;
+}
+
+
+
 /*
  * Método que se encarga de escribir el archivo de salida con todo lo que se pide en la especificación de la tarea.
 */
-int escribirArchivo(long * sumas, long diferencia,long double diferencia_div, long * cajaA,long * cajaB,long * cajaC)
+int escribirArchivo(long * sumas, long diferencia,long double diferencia_div, long * cajaA,long * cajaB,long * cajaC, int ultimaevaluacion)
 {
    FILE * archivo_respuesta = fopen("salida.txt","w");
    int indexCajas = 0;
@@ -118,7 +272,7 @@ int escribirArchivo(long * sumas, long diferencia,long double diferencia_div, lo
       exit(1);             
    }
    fprintf(archivo_respuesta,"----Estudiante: Jose Ignacio Viquez Rojas B78451, Tarea 1----\n");
-   fprintf(archivo_respuesta,"Evaluaciones: 1\n");
+   fprintf(archivo_respuesta,"Evaluaciones: %d\n",ultimaevaluacion);
    fprintf(archivo_respuesta,"------Sumas optenidas------\n");
    fprintf(archivo_respuesta,"Suma de la cajaA:%ld\n", sumas[0]);
    fprintf(archivo_respuesta,"Suma de la cajaB:%ld\n", sumas[1]);
@@ -179,23 +333,23 @@ int main(int argc, char const *argv[])
    ordenarArreglo(numeros, 10000);
 
    //2. Repartir los numeros dando al grupo con la menor suma el siguiente numero mas grande del arreglo ordenado.
-   repartirNumeros(numeros,cajaA,cajaB,cajaC,sumas);
+   int ultimaevaluacion = repartirNumerosAleatorio(numeros,cajaA,cajaB,cajaC,sumas);
 
    //3. Comparar las diferencias de los grupos
+   printf("La evaluacion : %d fue la que dio la menor diferencia, de los 10 millones.\n", ultimaevaluacion);
    printf("El valor de la cajaA fue de: %ld\n", sumas[0]);
    printf("El valor de la cajaB fue de: %ld\n", sumas[1]);
    printf("El valor de la cajaC fue de: %ld\n", sumas[2]);
    long diferencia = pow((sumas[0]- sumas[1]),2) + pow((sumas[0]-sumas[2]),2) +pow((sumas[1]-sumas[2]),2);
    long double diferencia_div = diferencia / pow(10,12);
-   //printf("La diferencia es: %ld\n", diferencia );
-   //printf("La diferencia al dividirla por 10^12 es: %Lf\n", diferencia_div );
+   printf("La diferencia es: %ld\n", diferencia );
+   printf("La diferencia al dividirla por 10^12 es: %Lf\n", diferencia_div );
 
    //Fin del algoritmo
    fin = clock();
    duracionPrograma = ((double) (fin - inicio))/CLOCKS_PER_SEC; //Formula tomada de: https://www.geeksforgeeks.org/how-to-measure-time-taken-by-a-program-in-c/
    printf("La duracion del programa fue: %Lf\n", duracionPrograma);
    //4. Escritura del archivo de salida
-   escribirArchivo(sumas, diferencia, diferencia_div, cajaA, cajaB, cajaC);
-
+   escribirArchivo(sumas, diferencia, diferencia_div, cajaA, cajaB, cajaC, ultimaevaluacion);
 	return 0;
 }
