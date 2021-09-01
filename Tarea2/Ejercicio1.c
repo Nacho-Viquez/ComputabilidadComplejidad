@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 {
 	//prueba();
 	char caracter;
-
+	printf("Ingrese la hilera que desea evaluar, finalice la hilera con un enter(cambio de linea): \n");
 inicio: //Estado  inicial
 	scanf("%c",&caracter);
 	if (caracter == '1'){
@@ -71,7 +71,7 @@ estadoC:
 		//Nos movemos al estado A
 		goto estadoA;
 	}else if (caracter == '\n'){
-		goto MensajeRechazo;
+		goto MensajeFinal;
 	}
 
 estadoD:
@@ -123,7 +123,7 @@ estadoE:
 		//Nos movemos al estado J
 		goto estadoJ;
 	}else if (caracter == '\n'){
-		goto MensajeRechazo;
+		goto MensajeFinal;
 	}
 
 estadoJ:

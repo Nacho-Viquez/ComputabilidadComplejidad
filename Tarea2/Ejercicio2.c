@@ -2,7 +2,7 @@
 int main(int argc, char const *argv[])
 {
 	char caracter;
-
+	printf("Ingrese la hilera que desea evaluar, finalice la hilera con un enter(cambio de linea): \n");
 residuo0: //residuo  inicial
 	scanf("%c",&caracter);
 	if (caracter == '0'){
