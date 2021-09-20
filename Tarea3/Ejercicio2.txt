@@ -1,0 +1,19 @@
+1. egrep '.*San.*' grepdata2.txt
+
+2. egrep '^J.*' grepdata2.txt
+
+3. egrep '.*(700)$' grepdata2.txt
+
+4. egrep -v '834' grepdata2.txt
+
+5. egrep '.*:12/.*' grepdata2.txt
+
+6. egrep '.*:408-.*' grepdata2.txt
+
+7. egrep '[[:upper:]][[:lower:]][[:lower:]][[:lower:]][[:lower:]], [[:upper:]]' grepdata2.txt
+
+8. egrep '.* (K|k)[a-z]*:[0-9].*' grepdata2.txt
+
+9. egrep -n ':[0-9][0-9][0-9][0-9][0-9][0-9]$' grepdata2.txt
+
+10. egrep -i '(Lincoln|lincoln)' grepdata2.txt

@@ -1,0 +1,20 @@
+Exercise 1:
+Primera parte:
+1.grep '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9] [xX][0-9][0-9][0-9][0-9]' grepdata.txt
+
+2.grep '^[0-9]\{3\} ' grepdata.txt
+
+3.grep '.*[0-9], \(20[0-9][0-9]\)$' grepdata.txt
+
+4.grep '\([aeiouAEIOU]\).\1' grepdata.txt
+
+5.grep '^[^S].*' grepdata.txt
+
+Segunda parte:
+1. grep -i '.*\(CA\).*' grepdata.txt
+
+2. grep -n '.*@.*\.com' grepdata.txt
+
+3. grep -v  '.*Sep\..*' grepdata.txt
+
+4. grep -w 'de' grepdata.txt
