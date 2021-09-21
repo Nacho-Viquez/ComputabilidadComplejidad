@@ -1,0 +1,17 @@
+1. sed -e 's/Jon/Jonathan/g' datebook.txt
+
+2. sed -e '1-3d' datebook.txt
+
+3. sed -n '5,10p' datebook.txt
+
+4. sed '/Lane/d' datebook.txt
+
+5. sed -n '/\:\(11\|12\)\//p' datebook.txt
+
+6. sed '/^Fred/s/$/***/' datebook.txt NOTA: encuentre las lineas con Fred y sustituya el final"$" con ***
+
+7. sed '/^Jose/c/JOSE HAS RETIRED/' datebook.txt NOTA: Puse el ^ por que si no se elimina la fila de otra persona y es por que la ciudad se llama San Jose y no creo que esta haya sido la intención del ejercicio.
+
+8. sed '/^Popeye/s/\:[0-9]\{1,2\}\/[0-9]\{1,2\}\/[0-9]\{1,2\}/:11\/14\/46/' datebook.txt
+
+9. sed '/^$/d' datebook.txt
