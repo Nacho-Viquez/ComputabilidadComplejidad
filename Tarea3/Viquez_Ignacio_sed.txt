@@ -1,3 +1,4 @@
+Jose Ignacio Viquez B78451
 1. sed -e 's/Jon/Jonathan/g' datebook.txt
 
 2. sed -e '1-3d' datebook.txt
