@@ -1,0 +1,40 @@
+Condado	poblacion	area acuatica	area terrestre
+Adams County	16428	4.73	1924.96
+Asotin County	20551	5.34	635.34
+Benton County	142475	57.03	1703.09
+Chelan County	66616	72.25	2921.37
+Clallam County	64525	930.89	1739.45
+Clark County	345238	27.99	628.22
+Columbia County	4064	4.71	868.81
+Cowlitz County	92948	27.69	1138.64
+Douglas County	32603	28.17	1820.53
+Ferry County	7260	53.48	2203.98
+Franklin County	49347	22.95	1242.40
+Garfield County	2397	7.64	710.55
+Grant County	74698	110.23	2681.06
+Grays Harbor County	67194	307.55	1916.89
+Island County	71558	308.95	208.43
+Jefferson County	25953	369.29	1814.23
+King County	1737034	180.48	2126.04
+Kitsap County	231969	170.01	395.97
+Kittitas County	33362	35.93	2297.19
+Klickitat County	19161	31.80	1872.37
+Lewis County	68600	28.63	2407.64
+Lincoln County	10184	28.51	2311.21
+Mason County	49405	89.97	961.06
+Okanogan County	39564	47.09	5268.07
+Pacific County	20984	290.52	932.97
+Pend Oreille County	11732	25.05	1400.27
+Pierce County	700820	127.58	1678.91
+San Juan County	14077	446.15	174.92
+Skagit County	102979	185.33	1735.14
+Skamania County	9872	27.42	1656.44
+Snohomish County	606024	107.35	2089.06
+Spokane County	417939	17.09	1763.64
+Stevens County	40066	62.34	2478.30
+Thurston County	207355	46.62	727.02
+Wahkiakum County	3824	22.45	264.24
+Walla Walla County	55180	28.74	1270.51
+Whatcom County	166814	384.02	2119.53
+Whitman County	40740	18.23	2159.37
+Yakima County	222581	15.38	4296.23
