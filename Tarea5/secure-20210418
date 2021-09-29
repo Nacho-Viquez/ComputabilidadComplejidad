@@ -1,0 +1,896 @@
+Apr 12 03:56:58 arenal sshd[17183]: Invalid user admin from 45.153.160.135 port 36339
+Apr 12 03:56:58 arenal sshd[17183]: input_userauth_request: invalid user admin [preauth]
+Apr 12 03:56:58 arenal sshd[17183]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 03:56:58 arenal sshd[17183]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.153.160.135
+Apr 12 03:57:00 arenal sshd[17183]: Failed password for invalid user admin from 45.153.160.135 port 36339 ssh2
+Apr 12 03:57:01 arenal sshd[17183]: Connection closed by 45.153.160.135 port 36339 [preauth]
+Apr 12 03:57:02 arenal sshd[17196]: Invalid user admin from 185.220.103.4 port 56450
+Apr 12 03:57:02 arenal sshd[17196]: input_userauth_request: invalid user admin [preauth]
+Apr 12 03:57:03 arenal sshd[17196]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 03:57:03 arenal sshd[17196]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=realitywinner.tor-exit.calyxinstitute.org
+Apr 12 03:57:04 arenal sshd[17196]: Failed password for invalid user admin from 185.220.103.4 port 56450 ssh2
+Apr 12 03:57:05 arenal sshd[17196]: Connection closed by 185.220.103.4 port 56450 [preauth]
+Apr 12 03:57:07 arenal sshd[17201]: Invalid user admin from 185.220.102.248 port 24666
+Apr 12 03:57:07 arenal sshd[17201]: input_userauth_request: invalid user admin [preauth]
+Apr 12 03:57:07 arenal sshd[17201]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 03:57:07 arenal sshd[17201]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit-relay-2.anonymizing-proxy.digitalcourage.de
+Apr 12 03:57:09 arenal sshd[17201]: Failed password for invalid user admin from 185.220.102.248 port 24666 ssh2
+Apr 12 03:57:09 arenal sshd[17201]: Connection closed by 185.220.102.248 port 24666 [preauth]
+Apr 12 03:57:10 arenal sshd[17214]: Invalid user admin from 185.220.102.248 port 32872
+Apr 12 03:57:10 arenal sshd[17214]: input_userauth_request: invalid user admin [preauth]
+Apr 12 03:57:10 arenal sshd[17214]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 03:57:10 arenal sshd[17214]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit-relay-2.anonymizing-proxy.digitalcourage.de
+Apr 12 03:57:13 arenal sshd[17214]: Failed password for invalid user admin from 185.220.102.248 port 32872 ssh2
+Apr 12 09:05:55 arenal sshd[7906]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=194.165.16.89  user=root
+Apr 12 09:05:55 arenal sshd[7906]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 12 09:05:56 arenal sshd[7906]: Failed password for root from 194.165.16.89 port 52734 ssh2
+Apr 12 09:05:57 arenal sshd[7906]: Connection closed by 194.165.16.89 port 52734 [preauth]
+Apr 12 10:16:48 arenal sshd[13125]: Invalid user pi from 62.221.121.185 port 44452
+Apr 12 10:16:48 arenal sshd[13125]: input_userauth_request: invalid user pi [preauth]
+Apr 12 10:16:48 arenal sshd[13126]: Invalid user pi from 62.221.121.185 port 62304
+Apr 12 10:16:48 arenal sshd[13126]: input_userauth_request: invalid user pi [preauth]
+Apr 12 10:16:48 arenal sshd[13125]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 10:16:48 arenal sshd[13125]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.121.221.62.dyn.idknet.com
+Apr 12 10:16:48 arenal sshd[13126]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 10:16:48 arenal sshd[13126]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.121.221.62.dyn.idknet.com
+Apr 12 10:16:50 arenal sshd[13125]: Failed password for invalid user pi from 62.221.121.185 port 44452 ssh2
+Apr 12 10:16:50 arenal sshd[13126]: Failed password for invalid user pi from 62.221.121.185 port 62304 ssh2
+Apr 12 10:16:50 arenal sshd[13125]: Connection closed by 62.221.121.185 port 44452 [preauth]
+Apr 12 10:16:51 arenal sshd[13126]: Connection closed by 62.221.121.185 port 62304 [preauth]
+Apr 12 14:45:48 arenal sshd[636]: Connection reset by 218.92.0.175 port 56596 [preauth]
+Apr 12 15:51:08 arenal sshd[5850]: Accepted keyboard-interactive/pam for root from 10.1.104.69 port 50640 ssh2
+Apr 12 15:51:08 arenal sshd[5850]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Apr 12 17:39:34 arenal sshd[14060]: Invalid user pi from 185.55.40.124 port 53030
+Apr 12 17:39:34 arenal sshd[14060]: input_userauth_request: invalid user pi [preauth]
+Apr 12 17:39:34 arenal sshd[14061]: Invalid user pi from 185.55.40.124 port 53034
+Apr 12 17:39:34 arenal sshd[14061]: input_userauth_request: invalid user pi [preauth]
+Apr 12 17:39:34 arenal sshd[14060]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 17:39:34 arenal sshd[14060]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.55.40.124
+Apr 12 17:39:34 arenal sshd[14061]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 17:39:34 arenal sshd[14061]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.55.40.124
+Apr 12 17:39:36 arenal sshd[14060]: Failed password for invalid user pi from 185.55.40.124 port 53030 ssh2
+Apr 12 17:39:36 arenal sshd[14061]: Failed password for invalid user pi from 185.55.40.124 port 53034 ssh2
+Apr 12 17:54:45 arenal sshd[5850]: Received disconnect from 10.1.104.69 port 50640:11: disconnected by user
+Apr 12 17:54:45 arenal sshd[5850]: Disconnected from 10.1.104.69 port 50640
+Apr 12 17:54:45 arenal sshd[5850]: pam_unix(sshd:session): session closed for user root
+Apr 12 19:19:55 arenal sshd[21521]: Invalid user uploader from 67.160.206.106 port 41887
+Apr 12 19:19:55 arenal sshd[21521]: input_userauth_request: invalid user uploader [preauth]
+Apr 12 19:19:55 arenal sshd[21521]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 19:19:55 arenal sshd[21521]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-67-160-206-106.hsd1.ca.comcast.net
+Apr 12 19:19:56 arenal sshd[21521]: Failed password for invalid user uploader from 67.160.206.106 port 41887 ssh2
+Apr 12 19:19:57 arenal sshd[21521]: Received disconnect from 67.160.206.106 port 41887:11: Bye Bye [preauth]
+Apr 12 19:19:57 arenal sshd[21521]: Disconnected from 67.160.206.106 port 41887 [preauth]
+Apr 12 19:19:58 arenal sshd[21526]: Invalid user usuario from 67.160.206.106 port 41986
+Apr 12 19:19:58 arenal sshd[21526]: input_userauth_request: invalid user usuario [preauth]
+Apr 12 19:19:58 arenal sshd[21526]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 19:19:58 arenal sshd[21526]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-67-160-206-106.hsd1.ca.comcast.net
+Apr 12 19:20:00 arenal sshd[21526]: Failed password for invalid user usuario from 67.160.206.106 port 41986 ssh2
+Apr 12 20:46:18 arenal sshd[27886]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.218  user=root
+Apr 12 20:46:18 arenal sshd[27886]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 12 20:46:20 arenal sshd[27886]: Failed password for root from 117.111.1.218 port 50259 ssh2
+Apr 12 20:46:21 arenal sshd[27886]: Received disconnect from 117.111.1.218 port 50259:11: Bye Bye [preauth]
+Apr 12 20:46:21 arenal sshd[27886]: Disconnected from 117.111.1.218 port 50259 [preauth]
+Apr 12 20:46:23 arenal sshd[27894]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.218  user=root
+Apr 12 20:46:23 arenal sshd[27894]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 12 20:46:25 arenal sshd[27894]: Failed password for root from 117.111.1.218 port 49709 ssh2
+Apr 12 20:46:26 arenal sshd[27894]: Received disconnect from 117.111.1.218 port 49709:11: Bye Bye [preauth]
+Apr 12 20:46:26 arenal sshd[27894]: Disconnected from 117.111.1.218 port 49709 [preauth]
+Apr 12 20:46:28 arenal sshd[27900]: Invalid user ubnt from 117.111.1.218 port 54080
+Apr 12 20:46:28 arenal sshd[27900]: input_userauth_request: invalid user ubnt [preauth]
+Apr 12 20:46:28 arenal sshd[27900]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 20:46:28 arenal sshd[27900]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.218
+Apr 12 20:46:30 arenal sshd[27900]: Failed password for invalid user ubnt from 117.111.1.218 port 54080 ssh2
+Apr 12 20:49:01 arenal sshd[28092]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.19  user=root
+Apr 12 20:49:01 arenal sshd[28092]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 12 20:49:02 arenal sshd[28092]: Failed password for root from 117.111.1.19 port 32456 ssh2
+Apr 12 20:49:03 arenal sshd[28092]: Received disconnect from 117.111.1.19 port 32456:11: Bye Bye [preauth]
+Apr 12 20:49:03 arenal sshd[28092]: Disconnected from 117.111.1.19 port 32456 [preauth]
+Apr 12 20:49:05 arenal sshd[28097]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.19  user=root
+Apr 12 20:49:05 arenal sshd[28097]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 12 20:49:07 arenal sshd[28097]: Failed password for root from 117.111.1.19 port 25465 ssh2
+Apr 12 20:49:08 arenal sshd[28097]: Received disconnect from 117.111.1.19 port 25465:11: Bye Bye [preauth]
+Apr 12 20:49:08 arenal sshd[28097]: Disconnected from 117.111.1.19 port 25465 [preauth]
+Apr 12 20:49:10 arenal sshd[28103]: Invalid user ubnt from 117.111.1.19 port 57861
+Apr 12 20:49:10 arenal sshd[28103]: input_userauth_request: invalid user ubnt [preauth]
+Apr 12 20:49:10 arenal sshd[28103]: pam_unix(sshd:auth): check pass; user unknown
+Apr 12 20:49:10 arenal sshd[28103]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.19
+Apr 12 20:49:12 arenal sshd[28103]: Failed password for invalid user ubnt from 117.111.1.19 port 57861 ssh2
+Apr 12 23:26:39 arenal sshd[7633]: Connection closed by 162.142.125.39 port 59740 [preauth]
+Apr 13 01:46:00 arenal sshd[17945]: Invalid user admin from 193.169.254.223 port 32900
+Apr 13 01:46:00 arenal sshd[17945]: input_userauth_request: invalid user admin [preauth]
+Apr 13 01:46:00 arenal sshd[17945]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 01:46:00 arenal sshd[17945]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.169.254.223
+Apr 13 01:46:02 arenal sshd[17945]: Failed password for invalid user admin from 193.169.254.223 port 32900 ssh2
+Apr 13 01:46:02 arenal sshd[17945]: Connection closed by 193.169.254.223 port 32900 [preauth]
+Apr 13 01:46:07 arenal sshd[17954]: Invalid user admin from 193.169.255.34 port 37134
+Apr 13 01:46:07 arenal sshd[17954]: input_userauth_request: invalid user admin [preauth]
+Apr 13 01:46:07 arenal sshd[17954]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 01:46:07 arenal sshd[17954]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.169.255.34
+Apr 13 01:46:09 arenal sshd[17954]: Failed password for invalid user admin from 193.169.255.34 port 37134 ssh2
+Apr 13 01:46:09 arenal sshd[17954]: Connection closed by 193.169.255.34 port 37134 [preauth]
+Apr 13 01:46:34 arenal sshd[17988]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.169.254.223  user=root
+Apr 13 01:46:34 arenal sshd[17988]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 01:46:36 arenal sshd[17988]: Failed password for root from 193.169.254.223 port 45096 ssh2
+Apr 13 01:46:36 arenal sshd[17988]: Connection closed by 193.169.254.223 port 45096 [preauth]
+Apr 13 01:46:43 arenal sshd[17999]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.169.255.34  user=root
+Apr 13 01:46:43 arenal sshd[17999]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 01:46:45 arenal sshd[17999]: Failed password for root from 193.169.255.34 port 55760 ssh2
+Apr 13 01:46:45 arenal sshd[17999]: Connection closed by 193.169.255.34 port 55760 [preauth]
+Apr 13 02:05:28 arenal sshd[19436]: Invalid user pi from 83.41.252.233 port 36260
+Apr 13 02:05:28 arenal sshd[19437]: Invalid user pi from 83.41.252.233 port 36262
+Apr 13 02:05:28 arenal sshd[19436]: input_userauth_request: invalid user pi [preauth]
+Apr 13 02:05:28 arenal sshd[19437]: input_userauth_request: invalid user pi [preauth]
+Apr 13 02:05:28 arenal sshd[19437]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 02:05:28 arenal sshd[19437]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=233.red-83-41-252.dynamicip.rima-tde.net
+Apr 13 02:05:28 arenal sshd[19436]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 02:05:28 arenal sshd[19436]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=233.red-83-41-252.dynamicip.rima-tde.net
+Apr 13 02:05:31 arenal sshd[19436]: Failed password for invalid user pi from 83.41.252.233 port 36260 ssh2
+Apr 13 02:05:31 arenal sshd[19437]: Failed password for invalid user pi from 83.41.252.233 port 36262 ssh2
+Apr 13 02:05:31 arenal sshd[19437]: Connection closed by 83.41.252.233 port 36262 [preauth]
+Apr 13 02:05:31 arenal sshd[19436]: Connection closed by 83.41.252.233 port 36260 [preauth]
+Apr 13 05:17:59 arenal sshd[1478]: Did not receive identification string from 23.129.64.247 port 62972
+Apr 13 05:18:01 arenal sshd[1481]: Connection closed by 23.129.64.247 port 20438 [preauth]
+Apr 13 05:59:03 arenal sshd[4683]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.92.0.165  user=root
+Apr 13 05:59:03 arenal sshd[4683]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 05:59:05 arenal sshd[4683]: Failed password for root from 218.92.0.165 port 40219 ssh2
+Apr 13 05:59:07 arenal sshd[4683]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 05:59:09 arenal sshd[4683]: Failed password for root from 218.92.0.165 port 40219 ssh2
+Apr 13 05:59:11 arenal sshd[4683]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 05:59:13 arenal sshd[4683]: Failed password for root from 218.92.0.165 port 40219 ssh2
+Apr 13 05:59:18 arenal sshd[4683]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 05:59:20 arenal sshd[4683]: Failed password for root from 218.92.0.165 port 40219 ssh2
+Apr 13 06:07:30 arenal sshd[5347]: reverse mapping checking getaddrinfo for 23-95-132-55-host.colocrossing.com [23.95.132.55] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 13 06:07:30 arenal sshd[5347]: Invalid user admin from 23.95.132.55 port 33576
+Apr 13 06:07:30 arenal sshd[5347]: input_userauth_request: invalid user admin [preauth]
+Apr 13 06:07:30 arenal sshd[5347]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 06:07:30 arenal sshd[5347]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=23.95.132.55
+Apr 13 06:07:32 arenal sshd[5347]: Failed password for invalid user admin from 23.95.132.55 port 33576 ssh2
+Apr 13 06:07:33 arenal sshd[5347]: Received disconnect from 23.95.132.55 port 33576:11: Bye Bye [preauth]
+Apr 13 06:07:33 arenal sshd[5347]: Disconnected from 23.95.132.55 port 33576 [preauth]
+Apr 13 06:07:43 arenal sshd[5356]: Connection closed by 23.95.132.55 port 38422 [preauth]
+Apr 13 07:04:00 arenal sshd[9538]: Did not receive identification string from 45.143.221.128 port 53470
+Apr 13 09:45:01 arenal sshd[21384]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=41.226.25.4  user=root
+Apr 13 09:45:01 arenal sshd[21384]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 09:45:03 arenal sshd[21384]: Failed password for root from 41.226.25.4 port 64183 ssh2
+Apr 13 09:45:03 arenal sshd[21384]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 09:45:05 arenal sshd[21384]: Failed password for root from 41.226.25.4 port 64183 ssh2
+Apr 13 09:45:06 arenal sshd[21384]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 09:45:08 arenal sshd[21384]: Failed password for root from 41.226.25.4 port 64183 ssh2
+Apr 13 09:45:08 arenal sshd[21384]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 09:45:09 arenal sshd[21384]: Failed password for root from 41.226.25.4 port 64183 ssh2
+Apr 13 10:21:42 arenal sshd[24116]: Invalid user admin from 185.220.103.5 port 35996
+Apr 13 10:21:42 arenal sshd[24116]: input_userauth_request: invalid user admin [preauth]
+Apr 13 10:21:42 arenal sshd[24116]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 10:21:42 arenal sshd[24116]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=chelseamanning.tor-exit.calyxinstitute.org
+Apr 13 10:21:44 arenal sshd[24116]: Failed password for invalid user admin from 185.220.103.5 port 35996 ssh2
+Apr 13 10:21:45 arenal sshd[24116]: Connection closed by 185.220.103.5 port 35996 [preauth]
+Apr 13 10:21:46 arenal sshd[24121]: Invalid user admin from 185.191.124.143 port 43119
+Apr 13 10:21:46 arenal sshd[24121]: input_userauth_request: invalid user admin [preauth]
+Apr 13 10:21:46 arenal sshd[24121]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 10:21:46 arenal sshd[24121]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.191.124.143
+Apr 13 10:21:48 arenal sshd[24121]: Failed password for invalid user admin from 185.191.124.143 port 43119 ssh2
+Apr 13 10:21:49 arenal sshd[24121]: Connection closed by 185.191.124.143 port 43119 [preauth]
+Apr 13 10:21:52 arenal sshd[24126]: Invalid user admin from 171.25.193.20 port 47302
+Apr 13 10:21:52 arenal sshd[24126]: input_userauth_request: invalid user admin [preauth]
+Apr 13 10:21:53 arenal sshd[24126]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 10:21:53 arenal sshd[24126]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit0-readme.dfri.se
+Apr 13 10:21:56 arenal sshd[24126]: Failed password for invalid user admin from 171.25.193.20 port 47302 ssh2
+Apr 13 10:21:56 arenal sshd[24126]: Connection closed by 171.25.193.20 port 47302 [preauth]
+Apr 13 10:21:58 arenal sshd[24141]: Invalid user admin from 23.129.64.204 port 60033
+Apr 13 10:21:58 arenal sshd[24141]: input_userauth_request: invalid user admin [preauth]
+Apr 13 10:21:58 arenal sshd[24141]: pam_unix(sshd:auth): check pass; user unknown
+Apr 13 10:21:58 arenal sshd[24141]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=23.129.64.204
+Apr 13 10:22:01 arenal sshd[24141]: Failed password for invalid user admin from 23.129.64.204 port 60033 ssh2
+Apr 13 10:22:01 arenal sshd[24141]: Connection closed by 23.129.64.204 port 60033 [preauth]
+Apr 13 10:56:50 arenal sshd[26681]: Accepted keyboard-interactive/pam for root from 10.1.104.68 port 47936 ssh2
+Apr 13 10:56:50 arenal sshd[26681]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Apr 13 10:57:22 compute-0-0 sshd[6392]: Accepted publickey for root from 172.16.1.1 port 45206 ssh2: RSA SHA256:XLFJ/vFgwxHvPEjxUEmiP9N5XmUtsPmyLhUJsVaW9b8
+Apr 13 10:57:22 compute-0-0 sshd[6392]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Apr 13 11:02:26 compute-0-0 sshd[6392]: Received disconnect from 172.16.1.1 port 45206:11: disconnected by user
+Apr 13 11:02:26 compute-0-0 sshd[6392]: Disconnected from 172.16.1.1 port 45206
+Apr 13 11:02:26 compute-0-0 sshd[6392]: pam_unix(sshd:session): session closed for user root
+Apr 13 12:21:04 arenal sshd[996]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=41.226.25.4  user=root
+Apr 13 12:21:04 arenal sshd[996]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 12:21:05 arenal sshd[996]: Failed password for root from 41.226.25.4 port 35163 ssh2
+Apr 13 12:21:06 arenal sshd[996]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 12:21:08 arenal sshd[996]: Failed password for root from 41.226.25.4 port 35163 ssh2
+Apr 13 12:21:08 arenal sshd[996]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 12:21:10 arenal sshd[996]: Failed password for root from 41.226.25.4 port 35163 ssh2
+Apr 13 12:21:10 arenal sshd[996]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 12:21:12 arenal sshd[996]: Failed password for root from 41.226.25.4 port 35163 ssh2
+Apr 13 12:21:13 arenal sshd[996]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 13 12:21:15 arenal sshd[996]: Failed password for root from 41.226.25.4 port 35163 ssh2
+Apr 13 12:40:47 arenal sshd[26681]: Received disconnect from 10.1.104.68 port 47936:11: disconnected by user
+Apr 13 12:40:47 arenal sshd[26681]: Disconnected from 10.1.104.68 port 47936
+Apr 13 12:40:47 arenal sshd[26681]: pam_unix(sshd:session): session closed for user root
+Apr 13 13:59:20 arenal sshd[8470]: Did not receive identification string from 45.85.90.193 port 53464
+Apr 13 14:26:01 arenal sshd[10457]: Connection closed by 192.35.168.160 port 33398 [preauth]
+Apr 13 22:05:18 arenal sshd[12256]: Did not receive identification string from 104.206.128.6 port 53325
+Apr 13 22:18:24 arenal sshd[13214]: Invalid user  from 65.49.20.67 port 35248
+Apr 13 22:18:24 arenal sshd[13214]: input_userauth_request: invalid user  [preauth]
+Apr 13 22:18:29 arenal sshd[13214]: Connection closed by 65.49.20.67 port 35248 [preauth]
+Apr 14 01:52:56 arenal sshd[29043]: Connection reset by 104.206.128.58 port 35374 [preauth]
+Apr 14 03:36:18 arenal sshd[4572]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.161.62.119  user=root
+Apr 14 03:36:18 arenal sshd[4572]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 03:36:19 arenal sshd[4572]: Failed password for root from 45.161.62.119 port 49839 ssh2
+Apr 14 03:36:20 arenal sshd[4572]: Received disconnect from 45.161.62.119 port 49839:11: Bye Bye [preauth]
+Apr 14 03:36:20 arenal sshd[4572]: Disconnected from 45.161.62.119 port 49839 [preauth]
+Apr 14 03:36:21 arenal sshd[4577]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.161.62.119  user=root
+Apr 14 03:36:21 arenal sshd[4577]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 03:36:23 arenal sshd[4577]: Failed password for root from 45.161.62.119 port 49955 ssh2
+Apr 14 03:36:23 arenal sshd[4577]: Received disconnect from 45.161.62.119 port 49955:11: Bye Bye [preauth]
+Apr 14 03:36:23 arenal sshd[4577]: Disconnected from 45.161.62.119 port 49955 [preauth]
+Apr 14 03:36:25 arenal sshd[4582]: Invalid user ubnt from 45.161.62.119 port 49956
+Apr 14 03:36:25 arenal sshd[4582]: input_userauth_request: invalid user ubnt [preauth]
+Apr 14 03:36:25 arenal sshd[4582]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 03:36:25 arenal sshd[4582]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.161.62.119
+Apr 14 03:36:27 arenal sshd[4582]: Failed password for invalid user ubnt from 45.161.62.119 port 49956 ssh2
+Apr 14 03:43:57 arenal sshd[5145]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.100  user=root
+Apr 14 03:43:57 arenal sshd[5145]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 03:43:59 arenal sshd[5145]: Failed password for root from 117.111.1.100 port 46654 ssh2
+Apr 14 03:43:59 arenal sshd[5145]: Received disconnect from 117.111.1.100 port 46654:11: Bye Bye [preauth]
+Apr 14 03:43:59 arenal sshd[5145]: Disconnected from 117.111.1.100 port 46654 [preauth]
+Apr 14 03:44:01 arenal sshd[5150]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.111.1.100  user=root
+Apr 14 03:44:01 arenal sshd[5150]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 03:44:04 arenal sshd[5150]: Failed password for root from 117.111.1.100 port 14906 ssh2
+Apr 14 03:44:04 arenal sshd[5150]: Received disconnect from 117.111.1.100 port 14906:11: Bye Bye [preauth]
+Apr 14 03:44:04 arenal sshd[5150]: Disconnected from 117.111.1.100 port 14906 [preauth]
+Apr 14 03:44:06 arenal sshd[5156]: Invalid user ubnt from 117.111.1.100 port 40272
+Apr 14 03:44:06 arenal sshd[5156]: input_userauth_request: invalid user ubnt [preauth]
+Apr 14 08:35:23 arenal sshd[26797]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-73-220-18-145.hsd1.ca.comcast.net  user=root
+Apr 14 08:35:23 arenal sshd[26797]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 08:35:25 arenal sshd[26797]: Failed password for root from 73.220.18.145 port 55743 ssh2
+Apr 14 08:35:25 arenal sshd[26797]: Received disconnect from 73.220.18.145 port 55743:11: Bye Bye [preauth]
+Apr 14 08:35:25 arenal sshd[26797]: Disconnected from 73.220.18.145 port 55743 [preauth]
+Apr 14 08:35:27 arenal sshd[26802]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-73-220-18-145.hsd1.ca.comcast.net  user=root
+Apr 14 08:35:27 arenal sshd[26802]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 08:35:29 arenal sshd[26802]: Failed password for root from 73.220.18.145 port 55877 ssh2
+Apr 14 08:35:29 arenal sshd[26802]: Received disconnect from 73.220.18.145 port 55877:11: Bye Bye [preauth]
+Apr 14 08:35:29 arenal sshd[26802]: Disconnected from 73.220.18.145 port 55877 [preauth]
+Apr 14 08:35:31 arenal sshd[26807]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-73-220-18-145.hsd1.ca.comcast.net  user=root
+Apr 14 08:35:31 arenal sshd[26807]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 08:35:32 arenal sshd[26807]: Failed password for root from 73.220.18.145 port 55892 ssh2
+Apr 14 09:27:49 arenal sshd[30688]: Invalid user pi from 111.117.123.157 port 49278
+Apr 14 09:27:49 arenal sshd[30688]: input_userauth_request: invalid user pi [preauth]
+Apr 14 09:27:49 arenal sshd[30690]: Invalid user pi from 111.117.123.157 port 49282
+Apr 14 09:27:49 arenal sshd[30690]: input_userauth_request: invalid user pi [preauth]
+Apr 14 09:27:49 arenal sshd[30688]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 09:27:49 arenal sshd[30688]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=111.117.123.157
+Apr 14 09:27:49 arenal sshd[30690]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 09:27:49 arenal sshd[30690]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=111.117.123.157
+Apr 14 09:27:51 arenal sshd[30688]: Failed password for invalid user pi from 111.117.123.157 port 49278 ssh2
+Apr 14 09:27:51 arenal sshd[30690]: Failed password for invalid user pi from 111.117.123.157 port 49282 ssh2
+Apr 14 09:27:51 arenal sshd[30688]: Connection closed by 111.117.123.157 port 49278 [preauth]
+Apr 14 09:27:51 arenal sshd[30690]: Connection closed by 111.117.123.157 port 49282 [preauth]
+Apr 14 09:40:21 arenal sshd[31617]: Invalid user pi from 31.17.204.32 port 35432
+Apr 14 09:40:21 arenal sshd[31617]: input_userauth_request: invalid user pi [preauth]
+Apr 14 09:40:21 arenal sshd[31618]: Invalid user pi from 31.17.204.32 port 35434
+Apr 14 09:40:21 arenal sshd[31618]: input_userauth_request: invalid user pi [preauth]
+Apr 14 09:40:21 arenal sshd[31617]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 09:40:21 arenal sshd[31617]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip1f11cc20.dynamic.kabel-deutschland.de
+Apr 14 09:40:21 arenal sshd[31618]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 09:40:21 arenal sshd[31618]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip1f11cc20.dynamic.kabel-deutschland.de
+Apr 14 09:40:24 arenal sshd[31617]: Failed password for invalid user pi from 31.17.204.32 port 35432 ssh2
+Apr 14 09:40:24 arenal sshd[31618]: Failed password for invalid user pi from 31.17.204.32 port 35434 ssh2
+Apr 14 09:40:24 arenal sshd[31617]: Connection closed by 31.17.204.32 port 35432 [preauth]
+Apr 14 12:57:22 arenal sshd[14045]: Connection closed by 71.6.199.23 port 49912 [preauth]
+Apr 14 12:57:23 arenal sshd[14048]: Connection closed by 71.6.199.23 port 50592 [preauth]
+Apr 14 13:29:12 arenal sshd[16395]: Connection reset by 218.92.0.158 port 55059 [preauth]
+Apr 14 14:49:53 arenal sshd[22331]: Connection reset by 218.92.0.158 port 53380 [preauth]
+Apr 14 15:34:49 arenal sshd[25692]: Invalid user test from 180.125.15.75 port 39394
+Apr 14 15:34:49 arenal sshd[25692]: input_userauth_request: invalid user test [preauth]
+Apr 14 15:34:50 arenal sshd[25692]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 15:34:50 arenal sshd[25692]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=180.125.15.75
+Apr 14 15:34:52 arenal sshd[25692]: Failed password for invalid user test from 180.125.15.75 port 39394 ssh2
+Apr 14 15:34:52 arenal sshd[25692]: Received disconnect from 180.125.15.75 port 39394:11: Bye Bye [preauth]
+Apr 14 15:34:52 arenal sshd[25692]: Disconnected from 180.125.15.75 port 39394 [preauth]
+Apr 14 15:34:55 arenal sshd[25707]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=180.125.15.75  user=root
+Apr 14 15:34:55 arenal sshd[25707]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 15:34:56 arenal sshd[25707]: Failed password for root from 180.125.15.75 port 39410 ssh2
+Apr 14 15:34:56 arenal sshd[25707]: Received disconnect from 180.125.15.75 port 39410:11: Bye Bye [preauth]
+Apr 14 15:34:56 arenal sshd[25707]: Disconnected from 180.125.15.75 port 39410 [preauth]
+Apr 14 15:47:12 arenal sshd[26573]: Connection reset by 218.92.0.145 port 59712 [preauth]
+Apr 14 16:46:37 arenal sshd[30997]: Invalid user admin from 178.20.55.16 port 46681
+Apr 14 16:46:37 arenal sshd[30997]: input_userauth_request: invalid user admin [preauth]
+Apr 14 16:46:37 arenal sshd[30997]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 16:46:37 arenal sshd[30997]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=marcuse-1.nos-oignons.net
+Apr 14 16:46:39 arenal sshd[30997]: Failed password for invalid user admin from 178.20.55.16 port 46681 ssh2
+Apr 14 16:46:39 arenal sshd[30997]: Connection closed by 178.20.55.16 port 46681 [preauth]
+Apr 14 16:46:42 arenal sshd[31002]: reverse mapping checking getaddrinfo for tor-exit.hartvoorinternetvrijheid.nl [192.42.116.16] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 14 16:46:42 arenal sshd[31002]: Invalid user admin from 192.42.116.16 port 28757
+Apr 14 16:46:42 arenal sshd[31002]: input_userauth_request: invalid user admin [preauth]
+Apr 14 16:46:42 arenal sshd[31002]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 16:46:42 arenal sshd[31002]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.42.116.16
+Apr 14 16:46:44 arenal sshd[31002]: Failed password for invalid user admin from 192.42.116.16 port 28757 ssh2
+Apr 14 16:46:45 arenal sshd[31002]: Connection closed by 192.42.116.16 port 28757 [preauth]
+Apr 14 16:46:46 arenal sshd[31009]: Invalid user admin from 185.220.101.205 port 18026
+Apr 14 16:46:46 arenal sshd[31009]: input_userauth_request: invalid user admin [preauth]
+Apr 14 16:46:46 arenal sshd[31009]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 16:46:46 arenal sshd[31009]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.101.205
+Apr 14 16:46:48 arenal sshd[31009]: Failed password for invalid user admin from 185.220.101.205 port 18026 ssh2
+Apr 14 16:46:49 arenal sshd[31009]: Connection closed by 185.220.101.205 port 18026 [preauth]
+Apr 14 16:46:50 arenal sshd[31021]: Invalid user admin from 209.127.17.242 port 53396
+Apr 14 16:46:50 arenal sshd[31021]: input_userauth_request: invalid user admin [preauth]
+Apr 14 16:46:50 arenal sshd[31021]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 16:46:50 arenal sshd[31021]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=209.127.17.242
+Apr 14 16:46:52 arenal sshd[31021]: Failed password for invalid user admin from 209.127.17.242 port 53396 ssh2
+Apr 14 16:46:53 arenal sshd[31021]: Connection closed by 209.127.17.242 port 53396 [preauth]
+Apr 14 18:11:19 arenal sshd[5178]: Connection closed by 85.227.240.89 port 47168 [preauth]
+Apr 14 18:46:33 arenal sshd[7735]: Connection closed by 74.120.14.37 port 60174 [preauth]
+Apr 14 19:13:35 arenal sshd[9777]: Invalid user pi from 115.138.244.107 port 56538
+Apr 14 19:13:35 arenal sshd[9777]: input_userauth_request: invalid user pi [preauth]
+Apr 14 19:13:36 arenal sshd[9777]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 19:13:36 arenal sshd[9777]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=115.138.244.107
+Apr 14 19:13:38 arenal sshd[9776]: Invalid user pi from 115.138.244.107 port 56536
+Apr 14 19:13:38 arenal sshd[9776]: input_userauth_request: invalid user pi [preauth]
+Apr 14 19:13:38 arenal sshd[9776]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 19:13:38 arenal sshd[9776]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=115.138.244.107
+Apr 14 19:13:38 arenal sshd[9777]: Failed password for invalid user pi from 115.138.244.107 port 56538 ssh2
+Apr 14 19:13:38 arenal sshd[9777]: Connection closed by 115.138.244.107 port 56538 [preauth]
+Apr 14 19:13:40 arenal sshd[9776]: Failed password for invalid user pi from 115.138.244.107 port 56536 ssh2
+Apr 14 19:15:30 arenal sshd[9922]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=075-136-128-138.res.spectrum.com  user=root
+Apr 14 19:15:30 arenal sshd[9922]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 19:15:32 arenal sshd[9922]: Failed password for root from 75.136.128.138 port 41999 ssh2
+Apr 14 19:15:32 arenal sshd[9922]: Received disconnect from 75.136.128.138 port 41999:11: Bye Bye [preauth]
+Apr 14 19:15:32 arenal sshd[9922]: Disconnected from 75.136.128.138 port 41999 [preauth]
+Apr 14 19:15:33 arenal sshd[9927]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=075-136-128-138.res.spectrum.com  user=root
+Apr 14 19:15:33 arenal sshd[9927]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 19:15:35 arenal sshd[9927]: Failed password for root from 75.136.128.138 port 42083 ssh2
+Apr 14 19:15:35 arenal sshd[9927]: Received disconnect from 75.136.128.138 port 42083:11: Bye Bye [preauth]
+Apr 14 19:15:35 arenal sshd[9927]: Disconnected from 75.136.128.138 port 42083 [preauth]
+Apr 14 19:15:36 arenal sshd[9932]: Invalid user admin from 75.136.128.138 port 42136
+Apr 14 19:15:36 arenal sshd[9932]: input_userauth_request: invalid user admin [preauth]
+Apr 14 19:15:36 arenal sshd[9932]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 19:15:36 arenal sshd[9932]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=075-136-128-138.res.spectrum.com
+Apr 14 19:15:39 arenal sshd[9932]: Failed password for invalid user admin from 75.136.128.138 port 42136 ssh2
+Apr 14 20:38:42 arenal sshd[16059]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=211.36.141.211  user=root
+Apr 14 20:38:42 arenal sshd[16059]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 20:38:44 arenal sshd[16059]: Failed password for root from 211.36.141.211 port 35977 ssh2
+Apr 14 20:38:45 arenal sshd[16059]: Received disconnect from 211.36.141.211 port 35977:11: Bye Bye [preauth]
+Apr 14 20:38:45 arenal sshd[16059]: Disconnected from 211.36.141.211 port 35977 [preauth]
+Apr 14 20:38:47 arenal sshd[16065]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=211.36.141.211  user=root
+Apr 14 20:38:47 arenal sshd[16065]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 20:38:49 arenal sshd[16065]: Failed password for root from 211.36.141.211 port 8903 ssh2
+Apr 14 20:38:49 arenal sshd[16065]: Received disconnect from 211.36.141.211 port 8903:11: Bye Bye [preauth]
+Apr 14 20:38:49 arenal sshd[16065]: Disconnected from 211.36.141.211 port 8903 [preauth]
+Apr 14 20:38:51 arenal sshd[16071]: Invalid user ubnt from 211.36.141.211 port 51065
+Apr 14 20:38:51 arenal sshd[16071]: input_userauth_request: invalid user ubnt [preauth]
+Apr 14 20:38:51 arenal sshd[16071]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 20:38:51 arenal sshd[16071]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=211.36.141.211
+Apr 14 20:38:53 arenal sshd[16071]: Failed password for invalid user ubnt from 211.36.141.211 port 51065 ssh2
+Apr 14 20:46:25 arenal sshd[16645]: Invalid user 2800 from 45.144.225.41 port 34832
+Apr 14 20:46:25 arenal sshd[16645]: input_userauth_request: invalid user 2800 [preauth]
+Apr 14 20:46:25 arenal sshd[16645]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 20:46:25 arenal sshd[16645]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.144.225.41
+Apr 14 20:46:26 arenal sshd[16645]: Failed password for invalid user 2800 from 45.144.225.41 port 34832 ssh2
+Apr 14 20:46:27 arenal sshd[16645]: Received disconnect from 45.144.225.41 port 34832:11: Bye Bye [preauth]
+Apr 14 20:46:27 arenal sshd[16645]: Disconnected from 45.144.225.41 port 34832 [preauth]
+Apr 14 20:46:28 arenal sshd[16649]: Invalid user 7654321 from 45.144.225.41 port 37518
+Apr 14 20:46:28 arenal sshd[16649]: input_userauth_request: invalid user 7654321 [preauth]
+Apr 14 20:46:28 arenal sshd[16649]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 20:46:28 arenal sshd[16649]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.144.225.41
+Apr 14 20:46:30 arenal sshd[16649]: Failed password for invalid user 7654321 from 45.144.225.41 port 37518 ssh2
+Apr 14 21:26:29 arenal sshd[19633]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-98-202-144-43.hsd1.ut.comcast.net  user=root
+Apr 14 21:26:29 arenal sshd[19633]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 21:26:31 arenal sshd[19633]: Failed password for root from 98.202.144.43 port 39382 ssh2
+Apr 14 21:26:32 arenal sshd[19633]: Received disconnect from 98.202.144.43 port 39382:11: Bye Bye [preauth]
+Apr 14 21:26:32 arenal sshd[19633]: Disconnected from 98.202.144.43 port 39382 [preauth]
+Apr 14 21:26:33 arenal sshd[19639]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-98-202-144-43.hsd1.ut.comcast.net  user=root
+Apr 14 21:26:33 arenal sshd[19639]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 14 21:26:35 arenal sshd[19639]: Failed password for root from 98.202.144.43 port 39462 ssh2
+Apr 14 21:26:35 arenal sshd[19639]: Received disconnect from 98.202.144.43 port 39462:11: Bye Bye [preauth]
+Apr 14 21:26:35 arenal sshd[19639]: Disconnected from 98.202.144.43 port 39462 [preauth]
+Apr 14 21:26:36 arenal sshd[19644]: Invalid user cloudera from 98.202.144.43 port 39491
+Apr 14 21:26:36 arenal sshd[19644]: input_userauth_request: invalid user cloudera [preauth]
+Apr 14 21:26:36 arenal sshd[19644]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 21:26:36 arenal sshd[19644]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=c-98-202-144-43.hsd1.ut.comcast.net
+Apr 14 21:26:38 arenal sshd[19644]: Failed password for invalid user cloudera from 98.202.144.43 port 39491 ssh2
+Apr 14 21:33:32 arenal sshd[20164]: Invalid user  from 65.49.20.67 port 54598
+Apr 14 21:33:32 arenal sshd[20164]: input_userauth_request: invalid user  [preauth]
+Apr 14 21:33:36 arenal sshd[20164]: Connection closed by 65.49.20.67 port 54598 [preauth]
+Apr 14 21:36:52 arenal sshd[20402]: Bad protocol version identification '\026\003\001\001"\001' from 164.52.24.164 port 42569
+Apr 14 21:36:52 arenal sshd[20404]: Bad protocol version identification '\026\003\001\001"\001' from 164.52.24.164 port 53007
+Apr 14 21:36:53 arenal sshd[20405]: Bad protocol version identification '\026\003\001' from 164.52.24.164 port 38955
+Apr 14 21:36:53 arenal sshd[20406]: Bad protocol version identification '\026\003\001' from 164.52.24.164 port 56626
+Apr 14 21:36:58 arenal sshd[20408]: Connection reset by 164.52.24.164 port 38676 [preauth]
+Apr 14 22:10:37 arenal sshd[22898]: Connection reset by 218.92.0.138 port 13564 [preauth]
+Apr 14 22:49:11 arenal sshd[25733]: Invalid user pi from 83.128.100.7 port 53628
+Apr 14 22:49:11 arenal sshd[25733]: input_userauth_request: invalid user pi [preauth]
+Apr 14 22:49:11 arenal sshd[25733]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 22:49:11 arenal sshd[25733]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=007-100-128-083.dynamic.caiway.nl
+Apr 14 22:49:14 arenal sshd[25733]: Failed password for invalid user pi from 83.128.100.7 port 53628 ssh2
+Apr 14 22:49:14 arenal sshd[25733]: Received disconnect from 83.128.100.7 port 53628:11: Bye Bye [preauth]
+Apr 14 22:49:14 arenal sshd[25733]: Disconnected from 83.128.100.7 port 53628 [preauth]
+Apr 14 22:49:15 arenal sshd[25741]: Invalid user support from 83.128.100.7 port 53729
+Apr 14 22:49:15 arenal sshd[25741]: input_userauth_request: invalid user support [preauth]
+Apr 14 22:49:15 arenal sshd[25741]: pam_unix(sshd:auth): check pass; user unknown
+Apr 14 22:49:15 arenal sshd[25741]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=007-100-128-083.dynamic.caiway.nl
+Apr 14 22:49:17 arenal sshd[25741]: Failed password for invalid user support from 83.128.100.7 port 53729 ssh2
+Apr 15 01:12:11 arenal sshd[4259]: Did not receive identification string from 102.134.168.181 port 50463
+Apr 15 01:12:20 arenal sshd[4265]: Invalid user admin from 102.134.168.181 port 51110
+Apr 15 01:12:20 arenal sshd[4265]: input_userauth_request: invalid user admin [preauth]
+Apr 15 01:12:20 arenal sshd[4265]: Failed none for invalid user admin from 102.134.168.181 port 51110 ssh2
+Apr 15 01:12:21 arenal sshd[4265]: Connection closed by 102.134.168.181 port 51110 [preauth]
+Apr 15 01:12:29 arenal sshd[4282]: Invalid user admin from 102.134.168.181 port 52125
+Apr 15 01:12:29 arenal sshd[4282]: input_userauth_request: invalid user admin [preauth]
+Apr 15 01:12:29 arenal sshd[4282]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 01:12:29 arenal sshd[4282]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=102.134.168.181
+Apr 15 01:12:31 arenal sshd[4282]: Failed password for invalid user admin from 102.134.168.181 port 52125 ssh2
+Apr 15 01:12:31 arenal sshd[4282]: Connection closed by 102.134.168.181 port 52125 [preauth]
+Apr 15 01:59:14 arenal sshd[7700]: Invalid user demo from 102.134.167.110 port 57497
+Apr 15 01:59:14 arenal sshd[7700]: input_userauth_request: invalid user demo [preauth]
+Apr 15 01:59:14 arenal sshd[7700]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 01:59:14 arenal sshd[7700]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=102.134.167.110
+Apr 15 01:59:16 arenal sshd[7700]: Failed password for invalid user demo from 102.134.167.110 port 57497 ssh2
+Apr 15 01:59:17 arenal sshd[7700]: Connection closed by 102.134.167.110 port 57497 [preauth]
+Apr 15 02:50:12 arenal sshd[11471]: Connection closed by 178.169.148.179 port 44330 [preauth]
+Apr 15 06:57:26 arenal sshd[29715]: Did not receive identification string from 218.92.0.184 port 3016
+Apr 15 10:12:26 arenal sshd[12148]: Connection closed by 162.142.125.53 port 56448 [preauth]
+Apr 15 13:01:13 arenal sshd[24562]: Connection closed by 74.120.14.38 port 46530 [preauth]
+Apr 15 13:42:45 arenal sshd[27658]: Did not receive identification string from 111.42.239.118 port 47690
+Apr 15 15:04:37 arenal sshd[1417]: reverse mapping checking getaddrinfo for sd41.t45ol.com [194.146.224.65] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 15 15:04:38 arenal sshd[1417]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=194.146.224.65  user=root
+Apr 15 15:04:38 arenal sshd[1417]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 15:04:40 arenal sshd[1417]: Failed password for root from 194.146.224.65 port 38125 ssh2
+Apr 15 15:04:40 arenal sshd[1417]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 15:04:42 arenal sshd[1417]: Failed password for root from 194.146.224.65 port 38125 ssh2
+Apr 15 15:04:42 arenal sshd[1417]: Received disconnect from 194.146.224.65 port 38125:11: disconnected by user [preauth]
+Apr 15 15:04:42 arenal sshd[1417]: Disconnected from 194.146.224.65 port 38125 [preauth]
+Apr 15 15:04:42 arenal sshd[1417]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=194.146.224.65  user=root
+Apr 15 15:36:07 arenal sshd[3919]: Invalid user pi from 107.131.14.238 port 57934
+Apr 15 15:36:07 arenal sshd[3919]: input_userauth_request: invalid user pi [preauth]
+Apr 15 15:36:07 arenal sshd[3919]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:36:07 arenal sshd[3919]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=107-131-14-238.lightspeed.irvnca.sbcglobal.net
+Apr 15 15:36:07 arenal sshd[3922]: Invalid user pi from 107.131.14.238 port 57932
+Apr 15 15:36:07 arenal sshd[3922]: input_userauth_request: invalid user pi [preauth]
+Apr 15 15:36:08 arenal sshd[3922]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:36:08 arenal sshd[3922]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=107-131-14-238.lightspeed.irvnca.sbcglobal.net
+Apr 15 15:36:09 arenal sshd[3919]: Failed password for invalid user pi from 107.131.14.238 port 57934 ssh2
+Apr 15 15:36:10 arenal sshd[3919]: Connection closed by 107.131.14.238 port 57934 [preauth]
+Apr 15 15:36:10 arenal sshd[3922]: Failed password for invalid user pi from 107.131.14.238 port 57932 ssh2
+Apr 15 15:45:51 arenal sshd[4633]: Invalid user admin from 213.202.233.34 port 38872
+Apr 15 15:45:51 arenal sshd[4633]: input_userauth_request: invalid user admin [preauth]
+Apr 15 15:45:51 arenal sshd[4633]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:45:51 arenal sshd[4633]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=srv1033.dedicated.server-hosting.expert
+Apr 15 15:45:54 arenal sshd[4633]: Failed password for invalid user admin from 213.202.233.34 port 38872 ssh2
+Apr 15 15:45:54 arenal sshd[4633]: Connection closed by 213.202.233.34 port 38872 [preauth]
+Apr 15 15:45:57 arenal sshd[4640]: Invalid user admin from 185.220.102.251 port 29134
+Apr 15 15:45:57 arenal sshd[4640]: input_userauth_request: invalid user admin [preauth]
+Apr 15 15:45:57 arenal sshd[4640]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:45:57 arenal sshd[4640]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit-relay-5.anonymizing-proxy.digitalcourage.de
+Apr 15 15:45:59 arenal sshd[4640]: Failed password for invalid user admin from 185.220.102.251 port 29134 ssh2
+Apr 15 15:46:00 arenal sshd[4640]: Connection closed by 185.220.102.251 port 29134 [preauth]
+Apr 15 15:46:07 arenal sshd[4647]: Invalid user admin from 198.251.80.157 port 60510
+Apr 15 15:46:07 arenal sshd[4647]: input_userauth_request: invalid user admin [preauth]
+Apr 15 15:46:07 arenal sshd[4647]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:46:07 arenal sshd[4647]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=198.251.80.157
+Apr 15 15:46:09 arenal sshd[4647]: Failed password for invalid user admin from 198.251.80.157 port 60510 ssh2
+Apr 15 15:46:10 arenal sshd[4647]: Connection closed by 198.251.80.157 port 60510 [preauth]
+Apr 15 15:46:12 arenal sshd[4664]: Invalid user admin from 185.220.101.1 port 5716
+Apr 15 15:46:12 arenal sshd[4664]: input_userauth_request: invalid user admin [preauth]
+Apr 15 15:46:12 arenal sshd[4664]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:46:12 arenal sshd[4664]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.101.1
+Apr 15 15:46:13 arenal sshd[4664]: Failed password for invalid user admin from 185.220.101.1 port 5716 ssh2
+Apr 15 15:46:14 arenal sshd[4664]: Connection closed by 185.220.101.1 port 5716 [preauth]
+Apr 15 15:46:26 arenal sshd[4676]: reverse mapping checking getaddrinfo for 185-220-102-242.torservers.net [185.220.102.242] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 15 15:46:26 arenal sshd[4676]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.102.242  user=root
+Apr 15 15:46:26 arenal sshd[4676]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 15:46:28 arenal sshd[4676]: Failed password for root from 185.220.102.242 port 17512 ssh2
+Apr 15 15:46:28 arenal sshd[4676]: Connection closed by 185.220.102.242 port 17512 [preauth]
+Apr 15 15:46:30 arenal sshd[4683]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.101.200  user=root
+Apr 15 15:46:30 arenal sshd[4683]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 15:46:32 arenal sshd[4683]: Failed password for root from 185.220.101.200 port 9810 ssh2
+Apr 15 15:46:32 arenal sshd[4683]: Connection closed by 185.220.101.200 port 9810 [preauth]
+Apr 15 15:46:34 arenal sshd[4696]: Invalid user user from 185.38.175.72 port 41790
+Apr 15 15:46:34 arenal sshd[4696]: input_userauth_request: invalid user user [preauth]
+Apr 15 15:46:35 arenal sshd[4696]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:46:35 arenal sshd[4696]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.38.175.72
+Apr 15 15:46:37 arenal sshd[4696]: Failed password for invalid user user from 185.38.175.72 port 41790 ssh2
+Apr 15 15:46:37 arenal sshd[4696]: Connection closed by 185.38.175.72 port 41790 [preauth]
+Apr 15 15:46:39 arenal sshd[4709]: reverse mapping checking getaddrinfo for tor.1u4.xyz [107.189.10.119] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 15 15:46:39 arenal sshd[4709]: Invalid user user from 107.189.10.119 port 38720
+Apr 15 15:46:39 arenal sshd[4709]: input_userauth_request: invalid user user [preauth]
+Apr 15 15:46:39 arenal sshd[4709]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 15:46:39 arenal sshd[4709]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=107.189.10.119
+Apr 15 15:46:41 arenal sshd[4709]: Failed password for invalid user user from 107.189.10.119 port 38720 ssh2
+Apr 15 15:46:42 arenal sshd[4709]: Connection closed by 107.189.10.119 port 38720 [preauth]
+Apr 15 16:37:19 arenal sshd[8443]: reverse mapping checking getaddrinfo for 45.6.56.54.centralsattelecom.com.br [45.6.56.54] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 15 16:37:19 arenal sshd[8443]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.6.56.54  user=root
+Apr 15 16:37:19 arenal sshd[8443]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 16:37:21 arenal sshd[8443]: Failed password for root from 45.6.56.54 port 50744 ssh2
+Apr 15 16:37:21 arenal sshd[8443]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 16:37:23 arenal sshd[8443]: Failed password for root from 45.6.56.54 port 50744 ssh2
+Apr 15 16:37:23 arenal sshd[8443]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 16:37:25 arenal sshd[8443]: Failed password for root from 45.6.56.54 port 50744 ssh2
+Apr 15 16:37:25 arenal sshd[8443]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 16:37:27 arenal sshd[8443]: Failed password for root from 45.6.56.54 port 50744 ssh2
+Apr 15 16:37:27 arenal sshd[8443]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 15 16:37:30 arenal sshd[8443]: Failed password for root from 45.6.56.54 port 50744 ssh2
+Apr 15 18:32:26 arenal sshd[16955]: reverse mapping checking getaddrinfo for static.190.215.173.181.gtdinternet.com [190.215.173.181] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 15 18:32:26 arenal sshd[16956]: reverse mapping checking getaddrinfo for static.190.215.173.181.gtdinternet.com [190.215.173.181] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 15 18:32:26 arenal sshd[16956]: Invalid user pi from 190.215.173.181 port 43372
+Apr 15 18:32:26 arenal sshd[16955]: Invalid user pi from 190.215.173.181 port 43366
+Apr 15 18:32:26 arenal sshd[16955]: input_userauth_request: invalid user pi [preauth]
+Apr 15 18:32:26 arenal sshd[16956]: input_userauth_request: invalid user pi [preauth]
+Apr 15 18:32:26 arenal sshd[16955]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 18:32:26 arenal sshd[16955]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.215.173.181
+Apr 15 18:32:26 arenal sshd[16956]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 18:32:26 arenal sshd[16956]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.215.173.181
+Apr 15 18:32:28 arenal sshd[16955]: Failed password for invalid user pi from 190.215.173.181 port 43366 ssh2
+Apr 15 18:32:28 arenal sshd[16956]: Failed password for invalid user pi from 190.215.173.181 port 43372 ssh2
+Apr 15 18:32:28 arenal sshd[16955]: Connection closed by 190.215.173.181 port 43366 [preauth]
+Apr 15 18:32:28 arenal sshd[16956]: Connection closed by 190.215.173.181 port 43372 [preauth]
+Apr 15 19:29:16 arenal sshd[21158]: Did not receive identification string from 157.90.250.72 port 43912
+Apr 15 19:49:39 arenal sshd[22646]: Invalid user  from 65.49.20.68 port 36672
+Apr 15 19:49:39 arenal sshd[22646]: input_userauth_request: invalid user  [preauth]
+Apr 15 19:49:43 arenal sshd[22646]: Connection closed by 65.49.20.68 port 36672 [preauth]
+Apr 15 22:12:53 arenal sshd[908]: Invalid user pi from 81.32.211.52 port 53546
+Apr 15 22:12:53 arenal sshd[907]: Invalid user pi from 81.32.211.52 port 53538
+Apr 15 22:12:53 arenal sshd[907]: input_userauth_request: invalid user pi [preauth]
+Apr 15 22:12:53 arenal sshd[908]: input_userauth_request: invalid user pi [preauth]
+Apr 15 22:12:53 arenal sshd[908]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 22:12:53 arenal sshd[908]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=52.red-81-32-211.dynamicip.rima-tde.net
+Apr 15 22:12:53 arenal sshd[907]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 22:12:53 arenal sshd[907]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=52.red-81-32-211.dynamicip.rima-tde.net
+Apr 15 22:12:55 arenal sshd[908]: Failed password for invalid user pi from 81.32.211.52 port 53546 ssh2
+Apr 15 22:12:55 arenal sshd[907]: Failed password for invalid user pi from 81.32.211.52 port 53538 ssh2
+Apr 15 22:12:55 arenal sshd[908]: Connection closed by 81.32.211.52 port 53546 [preauth]
+Apr 15 22:12:55 arenal sshd[907]: Connection closed by 81.32.211.52 port 53538 [preauth]
+Apr 15 22:48:14 arenal sshd[3731]: Connection closed by 31.41.91.72 port 63136 [preauth]
+Apr 15 23:11:27 arenal sshd[5489]: Invalid user admin from 45.9.13.235 port 51512
+Apr 15 23:11:27 arenal sshd[5489]: input_userauth_request: invalid user admin [preauth]
+Apr 15 23:11:28 arenal sshd[5489]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 23:11:28 arenal sshd[5489]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.9.13.235
+Apr 15 23:11:30 arenal sshd[5489]: Failed password for invalid user admin from 45.9.13.235 port 51512 ssh2
+Apr 15 23:11:30 arenal sshd[5489]: Connection closed by 45.9.13.235 port 51512 [preauth]
+Apr 15 23:11:39 arenal sshd[5503]: Invalid user admin from 45.153.160.132 port 42193
+Apr 15 23:11:39 arenal sshd[5503]: input_userauth_request: invalid user admin [preauth]
+Apr 15 23:11:39 arenal sshd[5503]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 23:11:39 arenal sshd[5503]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.153.160.132
+Apr 15 23:11:41 arenal sshd[5503]: Failed password for invalid user admin from 45.153.160.132 port 42193 ssh2
+Apr 15 23:11:41 arenal sshd[5503]: Connection closed by 45.153.160.132 port 42193 [preauth]
+Apr 15 23:11:43 arenal sshd[5515]: Invalid user admin from 185.220.101.215 port 29802
+Apr 15 23:11:43 arenal sshd[5515]: input_userauth_request: invalid user admin [preauth]
+Apr 15 23:11:43 arenal sshd[5515]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 23:11:43 arenal sshd[5515]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.101.215
+Apr 15 23:11:44 arenal sshd[5515]: Failed password for invalid user admin from 185.220.101.215 port 29802 ssh2
+Apr 15 23:11:45 arenal sshd[5515]: Connection closed by 185.220.101.215 port 29802 [preauth]
+Apr 15 23:11:47 arenal sshd[5528]: Invalid user admin from 185.220.102.252 port 6802
+Apr 15 23:11:47 arenal sshd[5528]: input_userauth_request: invalid user admin [preauth]
+Apr 15 23:11:47 arenal sshd[5528]: pam_unix(sshd:auth): check pass; user unknown
+Apr 15 23:11:47 arenal sshd[5528]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit-relay-6.anonymizing-proxy.digitalcourage.de
+Apr 15 23:11:49 arenal sshd[5528]: Failed password for invalid user admin from 185.220.102.252 port 6802 ssh2
+Apr 15 23:11:50 arenal sshd[5528]: Connection closed by 185.220.102.252 port 6802 [preauth]
+Apr 15 23:22:39 arenal sshd[6308]: Did not receive identification string from 129.150.172.40 port 38051
+Apr 15 23:39:12 arenal sshd[7518]: Did not receive identification string from 45.143.221.128 port 39710
+Apr 16 00:13:25 arenal sshd[10103]: Did not receive identification string from 193.162.35.12 port 43418
+Apr 16 00:13:40 arenal sshd[10117]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.162.35.12  user=root
+Apr 16 00:13:40 arenal sshd[10117]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 00:13:41 arenal sshd[10117]: Failed password for root from 193.162.35.12 port 37422 ssh2
+Apr 16 00:13:42 arenal sshd[10117]: Received disconnect from 193.162.35.12 port 37422:11: Normal Shutdown, Thank you for playing [preauth]
+Apr 16 00:13:42 arenal sshd[10117]: Disconnected from 193.162.35.12 port 37422 [preauth]
+Apr 16 00:14:01 arenal sshd[10151]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.162.35.12  user=root
+Apr 16 00:14:01 arenal sshd[10151]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 00:14:03 arenal sshd[10151]: Failed password for root from 193.162.35.12 port 60694 ssh2
+Apr 16 00:14:03 arenal sshd[10151]: Received disconnect from 193.162.35.12 port 60694:11: Normal Shutdown, Thank you for playing [preauth]
+Apr 16 00:14:03 arenal sshd[10151]: Disconnected from 193.162.35.12 port 60694 [preauth]
+Apr 16 01:10:16 arenal sshd[14292]: Connection closed by 167.248.133.39 port 54878 [preauth]
+Apr 16 01:54:37 arenal sshd[17553]: Invalid user pi from 129.21.148.57 port 54568
+Apr 16 01:54:37 arenal sshd[17554]: Invalid user pi from 129.21.148.57 port 54572
+Apr 16 01:54:37 arenal sshd[17553]: input_userauth_request: invalid user pi [preauth]
+Apr 16 01:54:37 arenal sshd[17554]: input_userauth_request: invalid user pi [preauth]
+Apr 16 01:54:37 arenal sshd[17554]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 01:54:37 arenal sshd[17553]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 01:54:37 arenal sshd[17554]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=rwby.student.rit.edu
+Apr 16 01:54:37 arenal sshd[17553]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=rwby.student.rit.edu
+Apr 16 01:54:39 arenal sshd[17553]: Failed password for invalid user pi from 129.21.148.57 port 54568 ssh2
+Apr 16 01:54:39 arenal sshd[17554]: Failed password for invalid user pi from 129.21.148.57 port 54572 ssh2
+Apr 16 01:54:39 arenal sshd[17553]: Connection closed by 129.21.148.57 port 54568 [preauth]
+Apr 16 01:54:39 arenal sshd[17554]: Connection closed by 129.21.148.57 port 54572 [preauth]
+Apr 16 01:58:09 arenal sshd[17819]: Did not receive identification string from 45.144.225.70 port 37154
+Apr 16 01:59:25 arenal sshd[17909]: Invalid user user from 45.144.225.70 port 36136
+Apr 16 01:59:25 arenal sshd[17909]: input_userauth_request: invalid user user [preauth]
+Apr 16 01:59:25 arenal sshd[17909]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 01:59:25 arenal sshd[17909]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.144.225.70
+Apr 16 01:59:27 arenal sshd[17909]: Failed password for invalid user user from 45.144.225.70 port 36136 ssh2
+Apr 16 01:59:27 arenal sshd[17909]: Received disconnect from 45.144.225.70 port 36136:11: Normal Shutdown, Thank you for playing [preauth]
+Apr 16 01:59:27 arenal sshd[17909]: Disconnected from 45.144.225.70 port 36136 [preauth]
+Apr 16 02:06:43 arenal sshd[18487]: Did not receive identification string from 147.135.211.7 port 40834
+Apr 16 02:06:45 arenal sshd[18497]: Connection closed by 205.185.127.217 port 42425 [preauth]
+Apr 16 03:01:14 arenal sshd[22528]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip24-253-147-57.hr.hr.cox.net  user=root
+Apr 16 03:01:14 arenal sshd[22528]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 03:01:16 arenal sshd[22528]: Failed password for root from 24.253.147.57 port 51149 ssh2
+Apr 16 03:01:16 arenal sshd[22528]: Received disconnect from 24.253.147.57 port 51149:11: Bye Bye [preauth]
+Apr 16 03:01:16 arenal sshd[22528]: Disconnected from 24.253.147.57 port 51149 [preauth]
+Apr 16 03:01:17 arenal sshd[22540]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip24-253-147-57.hr.hr.cox.net  user=root
+Apr 16 03:01:17 arenal sshd[22540]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 03:01:19 arenal sshd[22540]: Failed password for root from 24.253.147.57 port 51204 ssh2
+Apr 16 03:01:19 arenal sshd[22540]: Received disconnect from 24.253.147.57 port 51204:11: Bye Bye [preauth]
+Apr 16 03:01:19 arenal sshd[22540]: Disconnected from 24.253.147.57 port 51204 [preauth]
+Apr 16 03:01:20 arenal sshd[22544]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip24-253-147-57.hr.hr.cox.net  user=root
+Apr 16 03:01:20 arenal sshd[22544]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 03:01:22 arenal sshd[22544]: Failed password for root from 24.253.147.57 port 51253 ssh2
+Apr 16 04:42:06 arenal sshd[30130]: Address 14.161.6.201 maps to static.vnpt.vn, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Apr 16 04:42:06 arenal sshd[30127]: Address 14.161.6.201 maps to static.vnpt.vn, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Apr 16 04:42:06 arenal sshd[30127]: Invalid user pi from 14.161.6.201 port 32932
+Apr 16 04:42:06 arenal sshd[30130]: Invalid user pi from 14.161.6.201 port 32934
+Apr 16 04:42:06 arenal sshd[30127]: input_userauth_request: invalid user pi [preauth]
+Apr 16 04:42:06 arenal sshd[30130]: input_userauth_request: invalid user pi [preauth]
+Apr 16 04:42:06 arenal sshd[30130]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 04:42:06 arenal sshd[30127]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 04:42:06 arenal sshd[30130]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=14.161.6.201
+Apr 16 04:42:06 arenal sshd[30127]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=14.161.6.201
+Apr 16 04:42:07 arenal sshd[30130]: Failed password for invalid user pi from 14.161.6.201 port 32934 ssh2
+Apr 16 04:42:07 arenal sshd[30127]: Failed password for invalid user pi from 14.161.6.201 port 32932 ssh2
+Apr 16 04:43:32 arenal sshd[30234]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=211.36.142.215  user=root
+Apr 16 04:43:32 arenal sshd[30234]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 04:43:34 arenal sshd[30234]: Failed password for root from 211.36.142.215 port 47675 ssh2
+Apr 16 04:43:35 arenal sshd[30234]: Received disconnect from 211.36.142.215 port 47675:11: Bye Bye [preauth]
+Apr 16 04:43:35 arenal sshd[30234]: Disconnected from 211.36.142.215 port 47675 [preauth]
+Apr 16 04:43:37 arenal sshd[30241]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=211.36.142.215  user=root
+Apr 16 04:43:37 arenal sshd[30241]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 16 04:43:39 arenal sshd[30241]: Failed password for root from 211.36.142.215 port 48265 ssh2
+Apr 16 04:43:39 arenal sshd[30241]: Received disconnect from 211.36.142.215 port 48265:11: Bye Bye [preauth]
+Apr 16 04:43:39 arenal sshd[30241]: Disconnected from 211.36.142.215 port 48265 [preauth]
+Apr 16 04:43:41 arenal sshd[30246]: Invalid user ubnt from 211.36.142.215 port 28924
+Apr 16 04:43:41 arenal sshd[30246]: input_userauth_request: invalid user ubnt [preauth]
+Apr 16 04:43:42 arenal sshd[30246]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 04:43:42 arenal sshd[30246]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=211.36.142.215
+Apr 16 04:43:44 arenal sshd[30246]: Failed password for invalid user ubnt from 211.36.142.215 port 28924 ssh2
+Apr 16 05:27:50 arenal sshd[1228]: Invalid user pi from 83.32.18.130 port 57566
+Apr 16 05:27:50 arenal sshd[1227]: Invalid user pi from 83.32.18.130 port 57564
+Apr 16 05:27:50 arenal sshd[1227]: input_userauth_request: invalid user pi [preauth]
+Apr 16 05:27:50 arenal sshd[1228]: input_userauth_request: invalid user pi [preauth]
+Apr 16 05:27:50 arenal sshd[1227]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 05:27:50 arenal sshd[1227]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=130.red-83-32-18.dynamicip.rima-tde.net
+Apr 16 05:27:50 arenal sshd[1228]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 05:27:50 arenal sshd[1228]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=130.red-83-32-18.dynamicip.rima-tde.net
+Apr 16 05:27:52 arenal sshd[1228]: Failed password for invalid user pi from 83.32.18.130 port 57566 ssh2
+Apr 16 05:27:52 arenal sshd[1227]: Failed password for invalid user pi from 83.32.18.130 port 57564 ssh2
+Apr 16 05:27:52 arenal sshd[1227]: Connection closed by 83.32.18.130 port 57564 [preauth]
+Apr 16 05:27:52 arenal sshd[1228]: Connection closed by 83.32.18.130 port 57566 [preauth]
+Apr 16 07:46:00 arenal sshd[11668]: Invalid user pi from 78.12.72.232 port 39220
+Apr 16 07:46:00 arenal sshd[11668]: input_userauth_request: invalid user pi [preauth]
+Apr 16 07:46:00 arenal sshd[11670]: Invalid user pi from 78.12.72.232 port 39232
+Apr 16 07:46:00 arenal sshd[11670]: input_userauth_request: invalid user pi [preauth]
+Apr 16 07:46:01 arenal sshd[11668]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 07:46:01 arenal sshd[11668]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=dynamic-adsl-78-12-72-232.clienti.tiscali.it
+Apr 16 07:46:01 arenal sshd[11670]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 07:46:01 arenal sshd[11670]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=dynamic-adsl-78-12-72-232.clienti.tiscali.it
+Apr 16 07:46:02 arenal sshd[11668]: Failed password for invalid user pi from 78.12.72.232 port 39220 ssh2
+Apr 16 07:46:02 arenal sshd[11670]: Failed password for invalid user pi from 78.12.72.232 port 39232 ssh2
+Apr 16 07:46:03 arenal sshd[11670]: Connection closed by 78.12.72.232 port 39232 [preauth]
+Apr 16 07:46:03 arenal sshd[11668]: Connection closed by 78.12.72.232 port 39220 [preauth]
+Apr 16 09:52:00 arenal sshd[21198]: Connection closed by 128.14.209.226 port 57909 [preauth]
+Apr 16 11:37:36 arenal sshd[29087]: Did not receive identification string from 81.199.46.75 port 60367
+Apr 16 11:37:43 arenal sshd[29094]: Did not receive identification string from 81.199.46.75 port 39482
+Apr 16 18:49:09 arenal sshd[28803]: Invalid user pi from 31.18.13.31 port 57466
+Apr 16 18:49:09 arenal sshd[28801]: Invalid user pi from 31.18.13.31 port 57460
+Apr 16 18:49:09 arenal sshd[28801]: input_userauth_request: invalid user pi [preauth]
+Apr 16 18:49:09 arenal sshd[28803]: input_userauth_request: invalid user pi [preauth]
+Apr 16 18:49:09 arenal sshd[28803]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 18:49:09 arenal sshd[28803]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip1f120d1f.dynamic.kabel-deutschland.de
+Apr 16 18:49:09 arenal sshd[28801]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 18:49:09 arenal sshd[28801]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip1f120d1f.dynamic.kabel-deutschland.de
+Apr 16 18:49:11 arenal sshd[28803]: Failed password for invalid user pi from 31.18.13.31 port 57466 ssh2
+Apr 16 18:49:11 arenal sshd[28801]: Failed password for invalid user pi from 31.18.13.31 port 57460 ssh2
+Apr 16 18:49:11 arenal sshd[28801]: Connection closed by 31.18.13.31 port 57460 [preauth]
+Apr 16 18:49:11 arenal sshd[28803]: Connection closed by 31.18.13.31 port 57466 [preauth]
+Apr 16 19:05:15 arenal sshd[30038]: Did not receive identification string from 104.206.128.6 port 57248
+Apr 16 19:07:59 arenal sshd[30227]: Connection reset by 185.173.35.45 port 60827 [preauth]
+Apr 16 20:36:36 arenal sshd[4644]: Connection closed by 71.6.232.6 port 58980 [preauth]
+Apr 16 21:42:07 arenal sshd[9469]: Connection closed by 167.248.133.37 port 45740 [preauth]
+Apr 16 23:15:09 arenal sshd[16374]: Invalid user pi from 77.12.182.170 port 34414
+Apr 16 23:15:09 arenal sshd[16373]: Invalid user pi from 77.12.182.170 port 34412
+Apr 16 23:15:09 arenal sshd[16373]: input_userauth_request: invalid user pi [preauth]
+Apr 16 23:15:09 arenal sshd[16374]: input_userauth_request: invalid user pi [preauth]
+Apr 16 23:15:10 arenal sshd[16374]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 23:15:10 arenal sshd[16374]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=dynamic-077-012-182-170.77.12.pool.telefonica.de
+Apr 16 23:15:10 arenal sshd[16373]: pam_unix(sshd:auth): check pass; user unknown
+Apr 16 23:15:10 arenal sshd[16373]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=dynamic-077-012-182-170.77.12.pool.telefonica.de
+Apr 16 23:15:13 arenal sshd[16374]: Failed password for invalid user pi from 77.12.182.170 port 34414 ssh2
+Apr 16 23:15:13 arenal sshd[16373]: Failed password for invalid user pi from 77.12.182.170 port 34412 ssh2
+Apr 16 23:15:13 arenal sshd[16373]: Connection closed by 77.12.182.170 port 34412 [preauth]
+Apr 16 23:15:13 arenal sshd[16374]: Connection closed by 77.12.182.170 port 34414 [preauth]
+Apr 17 01:43:33 arenal sshd[27352]: Connection reset by 191.243.58.240 port 33395 [preauth]
+Apr 17 01:49:32 arenal sshd[27799]: Invalid user  from 65.49.20.66 port 58300
+Apr 17 01:49:32 arenal sshd[27799]: input_userauth_request: invalid user  [preauth]
+Apr 17 01:49:36 arenal sshd[27799]: Connection closed by 65.49.20.66 port 58300 [preauth]
+Apr 17 02:47:34 arenal sshd[32125]: Connection closed by 172.105.77.150 port 59330 [preauth]
+Apr 17 02:47:34 arenal sshd[32124]: Connection closed by 172.105.77.150 port 59334 [preauth]
+Apr 17 02:47:34 arenal sshd[32126]: Unable to negotiate with 172.105.77.150 port 59328: no matching host key type found. Their offer: ssh-dss [preauth]
+Apr 17 02:47:44 arenal sshd[32138]: Did not receive identification string from 139.162.199.128 port 32800
+Apr 17 04:29:02 arenal sshd[7684]: Invalid user pi from 83.29.126.217 port 59724
+Apr 17 04:29:02 arenal sshd[7685]: Invalid user pi from 83.29.126.217 port 59726
+Apr 17 04:29:02 arenal sshd[7684]: input_userauth_request: invalid user pi [preauth]
+Apr 17 04:29:02 arenal sshd[7685]: input_userauth_request: invalid user pi [preauth]
+Apr 17 04:29:02 arenal sshd[7684]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 04:29:02 arenal sshd[7684]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=83.29.126.217.ipv4.supernova.orange.pl
+Apr 17 04:29:02 arenal sshd[7685]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 04:29:02 arenal sshd[7685]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=83.29.126.217.ipv4.supernova.orange.pl
+Apr 17 04:29:04 arenal sshd[7685]: Failed password for invalid user pi from 83.29.126.217 port 59726 ssh2
+Apr 17 04:29:04 arenal sshd[7684]: Failed password for invalid user pi from 83.29.126.217 port 59724 ssh2
+Apr 17 04:29:05 arenal sshd[7684]: Connection closed by 83.29.126.217 port 59724 [preauth]
+Apr 17 04:29:05 arenal sshd[7685]: Connection closed by 83.29.126.217 port 59726 [preauth]
+Apr 17 05:00:00 arenal sshd[9961]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=27.20.67.148  user=root
+Apr 17 05:00:00 arenal sshd[9961]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 17 05:00:02 arenal sshd[9961]: Failed password for root from 27.20.67.148 port 37896 ssh2
+Apr 17 05:00:02 arenal sshd[9961]: Received disconnect from 27.20.67.148 port 37896:11: Bye Bye [preauth]
+Apr 17 05:00:02 arenal sshd[9961]: Disconnected from 27.20.67.148 port 37896 [preauth]
+Apr 17 05:00:06 arenal sshd[9983]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=27.20.67.148  user=root
+Apr 17 05:00:06 arenal sshd[9983]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 17 05:00:08 arenal sshd[9983]: Failed password for root from 27.20.67.148 port 38172 ssh2
+Apr 17 05:00:08 arenal sshd[9983]: Received disconnect from 27.20.67.148 port 38172:11: Bye Bye [preauth]
+Apr 17 05:00:08 arenal sshd[9983]: Disconnected from 27.20.67.148 port 38172 [preauth]
+Apr 17 05:00:10 arenal sshd[9997]: Invalid user ubnt from 27.20.67.148 port 38412
+Apr 17 05:00:10 arenal sshd[9997]: input_userauth_request: invalid user ubnt [preauth]
+Apr 17 05:00:10 arenal sshd[9997]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:00:10 arenal sshd[9997]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=27.20.67.148
+Apr 17 05:00:12 arenal sshd[9997]: Failed password for invalid user ubnt from 27.20.67.148 port 38412 ssh2
+Apr 17 05:29:51 arenal sshd[12208]: Invalid user pi from 212.198.188.217 port 54306
+Apr 17 05:29:51 arenal sshd[12207]: Invalid user pi from 212.198.188.217 port 54302
+Apr 17 05:29:51 arenal sshd[12207]: input_userauth_request: invalid user pi [preauth]
+Apr 17 05:29:51 arenal sshd[12208]: input_userauth_request: invalid user pi [preauth]
+Apr 17 05:29:51 arenal sshd[12208]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:29:51 arenal sshd[12207]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:29:51 arenal sshd[12208]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=212-198-188-217.rev.numericable.fr
+Apr 17 05:29:51 arenal sshd[12207]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=212-198-188-217.rev.numericable.fr
+Apr 17 05:29:53 arenal sshd[12208]: Failed password for invalid user pi from 212.198.188.217 port 54306 ssh2
+Apr 17 05:29:53 arenal sshd[12207]: Failed password for invalid user pi from 212.198.188.217 port 54302 ssh2
+Apr 17 05:29:53 arenal sshd[12207]: Connection closed by 212.198.188.217 port 54302 [preauth]
+Apr 17 05:29:53 arenal sshd[12208]: Connection closed by 212.198.188.217 port 54306 [preauth]
+Apr 17 05:35:31 arenal sshd[12629]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=36-225-1-151.dynamic-ip.hinet.net  user=root
+Apr 17 05:35:31 arenal sshd[12629]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 17 05:35:33 arenal sshd[12629]: Failed password for root from 36.225.1.151 port 49678 ssh2
+Apr 17 05:35:33 arenal sshd[12629]: Received disconnect from 36.225.1.151 port 49678:11: Bye Bye [preauth]
+Apr 17 05:35:33 arenal sshd[12629]: Disconnected from 36.225.1.151 port 49678 [preauth]
+Apr 17 05:35:35 arenal sshd[12635]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=36-225-1-151.dynamic-ip.hinet.net  user=apache
+Apr 17 05:35:35 arenal sshd[12635]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "apache"
+Apr 17 05:35:37 arenal sshd[12635]: Failed password for apache from 36.225.1.151 port 49777 ssh2
+Apr 17 05:35:37 arenal sshd[12635]: Received disconnect from 36.225.1.151 port 49777:11: Bye Bye [preauth]
+Apr 17 05:35:37 arenal sshd[12635]: Disconnected from 36.225.1.151 port 49777 [preauth]
+Apr 17 05:35:38 arenal sshd[12655]: reverse mapping checking getaddrinfo for 185-220-102-241.torservers.net [185.220.102.241] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 05:35:38 arenal sshd[12655]: Invalid user admin from 185.220.102.241 port 12726
+Apr 17 05:35:38 arenal sshd[12655]: input_userauth_request: invalid user admin [preauth]
+Apr 17 05:35:39 arenal sshd[12655]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:35:39 arenal sshd[12655]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.102.241
+Apr 17 05:35:40 arenal sshd[12658]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=36-225-1-151.dynamic-ip.hinet.net  user=root
+Apr 17 05:35:40 arenal sshd[12658]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 17 05:35:41 arenal sshd[12655]: Failed password for invalid user admin from 185.220.102.241 port 12726 ssh2
+Apr 17 05:35:41 arenal sshd[12655]: Connection closed by 185.220.102.241 port 12726 [preauth]
+Apr 17 05:35:42 arenal sshd[12658]: Failed password for root from 36.225.1.151 port 49878 ssh2
+Apr 17 05:35:43 arenal sshd[12667]: reverse mapping checking getaddrinfo for 185-220-102-243.torservers.net [185.220.102.243] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 05:35:43 arenal sshd[12667]: Invalid user admin from 185.220.102.243 port 27218
+Apr 17 05:35:43 arenal sshd[12667]: input_userauth_request: invalid user admin [preauth]
+Apr 17 05:35:43 arenal sshd[12667]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:35:43 arenal sshd[12667]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.102.243
+Apr 17 05:35:46 arenal sshd[12667]: Failed password for invalid user admin from 185.220.102.243 port 27218 ssh2
+Apr 17 05:35:46 arenal sshd[12667]: Connection closed by 185.220.102.243 port 27218 [preauth]
+Apr 17 05:35:47 arenal sshd[12672]: Invalid user admin from 185.220.102.248 port 30806
+Apr 17 05:35:47 arenal sshd[12672]: input_userauth_request: invalid user admin [preauth]
+Apr 17 05:35:48 arenal sshd[12672]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:35:48 arenal sshd[12672]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit-relay-2.anonymizing-proxy.digitalcourage.de
+Apr 17 05:35:50 arenal sshd[12672]: Failed password for invalid user admin from 185.220.102.248 port 30806 ssh2
+Apr 17 05:35:51 arenal sshd[12672]: Connection closed by 185.220.102.248 port 30806 [preauth]
+Apr 17 05:35:53 arenal sshd[12678]: reverse mapping checking getaddrinfo for 185-220-102-246.torservers.net [185.220.102.246] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 05:35:53 arenal sshd[12678]: Invalid user admin from 185.220.102.246 port 28456
+Apr 17 05:35:53 arenal sshd[12678]: input_userauth_request: invalid user admin [preauth]
+Apr 17 05:35:54 arenal sshd[12678]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 05:35:54 arenal sshd[12678]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.220.102.246
+Apr 17 05:35:56 arenal sshd[12678]: Failed password for invalid user admin from 185.220.102.246 port 28456 ssh2
+Apr 17 05:35:57 arenal sshd[12678]: Connection closed by 185.220.102.246 port 28456 [preauth]
+Apr 17 12:09:54 arenal sshd[9666]: Invalid user pi from 84.214.55.32 port 40642
+Apr 17 12:09:54 arenal sshd[9666]: input_userauth_request: invalid user pi [preauth]
+Apr 17 12:09:54 arenal sshd[9667]: Invalid user pi from 84.214.55.32 port 40644
+Apr 17 12:09:54 arenal sshd[9667]: input_userauth_request: invalid user pi [preauth]
+Apr 17 12:09:54 arenal sshd[9666]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 12:09:54 arenal sshd[9666]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=cm-84.214.55.32.getinternet.no
+Apr 17 12:09:55 arenal sshd[9667]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 12:09:55 arenal sshd[9667]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=cm-84.214.55.32.getinternet.no
+Apr 17 12:09:56 arenal sshd[9667]: Failed password for invalid user pi from 84.214.55.32 port 40644 ssh2
+Apr 17 12:09:57 arenal sshd[9667]: Connection closed by 84.214.55.32 port 40644 [preauth]
+Apr 17 12:09:57 arenal sshd[9666]: Failed password for invalid user pi from 84.214.55.32 port 40642 ssh2
+Apr 17 12:09:57 arenal sshd[9666]: Connection closed by 84.214.55.32 port 40642 [preauth]
+Apr 17 12:17:40 arenal sshd[10238]: Connection closed by 138.219.12.35 port 40602 [preauth]
+Apr 17 12:55:09 arenal sshd[12965]: Connection reset by 218.92.0.175 port 54036 [preauth]
+Apr 17 16:35:57 arenal sshd[29335]: Invalid user pi from 178.202.244.155 port 34898
+Apr 17 16:35:57 arenal sshd[29334]: Invalid user pi from 178.202.244.155 port 34892
+Apr 17 16:35:57 arenal sshd[29335]: input_userauth_request: invalid user pi [preauth]
+Apr 17 16:35:57 arenal sshd[29334]: input_userauth_request: invalid user pi [preauth]
+Apr 17 16:35:57 arenal sshd[29334]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 16:35:57 arenal sshd[29334]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip-178-202-244-155.hsi09.unitymediagroup.de
+Apr 17 16:35:57 arenal sshd[29335]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 16:35:57 arenal sshd[29335]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ip-178-202-244-155.hsi09.unitymediagroup.de
+Apr 17 16:36:00 arenal sshd[29335]: Failed password for invalid user pi from 178.202.244.155 port 34898 ssh2
+Apr 17 16:36:00 arenal sshd[29334]: Failed password for invalid user pi from 178.202.244.155 port 34892 ssh2
+Apr 17 17:07:18 arenal sshd[31703]: reverse mapping checking getaddrinfo for 177.66.153.211.tmctelecomunicacoes.com.br [177.66.153.211] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 17:07:18 arenal sshd[31703]: Invalid user soporte from 177.66.153.211 port 57791
+Apr 17 17:07:18 arenal sshd[31703]: input_userauth_request: invalid user soporte [preauth]
+Apr 17 17:07:18 arenal sshd[31703]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 17:07:18 arenal sshd[31703]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=177.66.153.211
+Apr 17 17:07:20 arenal sshd[31703]: Failed password for invalid user soporte from 177.66.153.211 port 57791 ssh2
+Apr 17 17:07:20 arenal sshd[31703]: Connection closed by 177.66.153.211 port 57791 [preauth]
+Apr 17 17:09:14 arenal sshd[31840]: reverse mapping checking getaddrinfo for pool-30-79-40-181.telecel.com.py [181.40.79.30] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 17:09:14 arenal sshd[31840]: Invalid user gmerluzzi from 181.40.79.30 port 42175
+Apr 17 17:09:14 arenal sshd[31840]: input_userauth_request: invalid user gmerluzzi [preauth]
+Apr 17 17:09:14 arenal sshd[31840]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 17:09:14 arenal sshd[31840]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=181.40.79.30
+Apr 17 17:09:17 arenal sshd[31840]: Failed password for invalid user gmerluzzi from 181.40.79.30 port 42175 ssh2
+Apr 17 17:09:17 arenal sshd[31840]: Connection closed by 181.40.79.30 port 42175 [preauth]
+Apr 17 17:12:13 arenal sshd[32068]: Invalid user administrador from 190.15.196.96 port 6664
+Apr 17 17:12:13 arenal sshd[32068]: input_userauth_request: invalid user administrador [preauth]
+Apr 17 17:12:13 arenal sshd[32068]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 17:12:13 arenal sshd[32068]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=static.196.96.itcsa.net
+Apr 17 17:12:15 arenal sshd[32068]: Failed password for invalid user administrador from 190.15.196.96 port 6664 ssh2
+Apr 17 17:12:15 arenal sshd[32068]: Connection closed by 190.15.196.96 port 6664 [preauth]
+Apr 17 17:52:51 arenal sshd[2817]: Did not receive identification string from 218.92.0.158 port 4116
+Apr 17 18:49:37 arenal sshd[7114]: Did not receive identification string from 45.143.221.86 port 54946
+Apr 17 19:11:45 arenal sshd[8788]: Did not receive identification string from 111.42.239.118 port 32067
+Apr 17 19:25:12 arenal sshd[9771]: Did not receive identification string from 111.42.239.118 port 30571
+Apr 17 19:57:02 arenal sshd[12093]: Invalid user  from 65.49.20.68 port 54772
+Apr 17 19:57:02 arenal sshd[12093]: input_userauth_request: invalid user  [preauth]
+Apr 17 19:57:06 arenal sshd[12093]: Connection closed by 65.49.20.68 port 54772 [preauth]
+Apr 17 20:26:45 arenal sshd[14313]: Address 143.202.209.61 maps to neo.com.py, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 20:26:45 arenal sshd[14313]: Invalid user nquiroga from 143.202.209.61 port 6664
+Apr 17 20:26:45 arenal sshd[14313]: input_userauth_request: invalid user nquiroga [preauth]
+Apr 17 20:26:45 arenal sshd[14313]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 20:26:45 arenal sshd[14313]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=143.202.209.61
+Apr 17 20:26:46 arenal sshd[14313]: Failed password for invalid user nquiroga from 143.202.209.61 port 6664 ssh2
+Apr 17 20:26:46 arenal sshd[14313]: Connection closed by 143.202.209.61 port 6664 [preauth]
+Apr 17 20:28:08 arenal sshd[14419]: Invalid user soporte from 200.54.214.85 port 47035
+Apr 17 20:28:08 arenal sshd[14419]: input_userauth_request: invalid user soporte [preauth]
+Apr 17 20:28:08 arenal sshd[14419]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 20:28:08 arenal sshd[14419]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=200.54.214.85
+Apr 17 20:28:09 arenal sshd[14419]: Failed password for invalid user soporte from 200.54.214.85 port 47035 ssh2
+Apr 17 20:28:09 arenal sshd[14419]: Connection closed by 200.54.214.85 port 47035 [preauth]
+Apr 17 20:32:48 arenal sshd[14762]: Invalid user recepcion from 190.117.104.87 port 6664
+Apr 17 20:32:48 arenal sshd[14762]: input_userauth_request: invalid user recepcion [preauth]
+Apr 17 20:32:48 arenal sshd[14762]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 20:32:48 arenal sshd[14762]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.117.104.87
+Apr 17 20:32:50 arenal sshd[14762]: Failed password for invalid user recepcion from 190.117.104.87 port 6664 ssh2
+Apr 17 20:32:50 arenal sshd[14762]: Connection closed by 190.117.104.87 port 6664 [preauth]
+Apr 17 20:42:06 arenal sshd[15449]: Address 106.51.127.128 maps to broadband.actcorp.in, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 20:42:06 arenal sshd[15449]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=106.51.127.128  user=daemon
+Apr 17 20:42:06 arenal sshd[15449]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "daemon"
+Apr 17 20:42:08 arenal sshd[15449]: Failed password for daemon from 106.51.127.128 port 46987 ssh2
+Apr 17 20:42:08 arenal sshd[15449]: Received disconnect from 106.51.127.128 port 46987:11: disconnected by user [preauth]
+Apr 17 20:42:08 arenal sshd[15449]: Disconnected from 106.51.127.128 port 46987 [preauth]
+Apr 17 20:53:05 arenal sshd[16218]: Connection reset by 218.92.0.158 port 2193 [preauth]
+Apr 17 22:12:39 arenal sshd[22144]: Invalid user oracle from 190.15.196.96 port 6664
+Apr 17 22:12:39 arenal sshd[22144]: input_userauth_request: invalid user oracle [preauth]
+Apr 17 22:12:39 arenal sshd[22144]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 22:12:39 arenal sshd[22144]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=static.196.96.itcsa.net
+Apr 17 22:12:42 arenal sshd[22144]: Failed password for invalid user oracle from 190.15.196.96 port 6664 ssh2
+Apr 17 22:12:42 arenal sshd[22144]: Connection closed by 190.15.196.96 port 6664 [preauth]
+Apr 17 22:17:37 arenal sshd[22501]: Did not receive identification string from 111.42.239.118 port 31249
+Apr 17 23:20:18 arenal sshd[27135]: Invalid user recepcion from 190.117.104.87 port 6664
+Apr 17 23:20:18 arenal sshd[27135]: input_userauth_request: invalid user recepcion [preauth]
+Apr 17 23:20:18 arenal sshd[27135]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 23:20:18 arenal sshd[27135]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.117.104.87
+Apr 17 23:20:20 arenal sshd[27135]: Failed password for invalid user recepcion from 190.117.104.87 port 6664 ssh2
+Apr 17 23:20:20 arenal sshd[27135]: Connection closed by 190.117.104.87 port 6664 [preauth]
+Apr 17 23:31:00 arenal sshd[27916]: reverse mapping checking getaddrinfo for 220.9.52.116.broad.km.yn.dynamic.163data.com.cn [116.52.9.220] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 17 23:31:00 arenal sshd[27916]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=116.52.9.220  user=root
+Apr 17 23:31:00 arenal sshd[27916]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 17 23:31:02 arenal sshd[27916]: Failed password for root from 116.52.9.220 port 37863 ssh2
+Apr 17 23:31:02 arenal sshd[27916]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
+Apr 17 23:31:04 arenal sshd[27916]: Failed password for root from 116.52.9.220 port 37863 ssh2
+Apr 17 23:31:04 arenal sshd[27916]: Received disconnect from 116.52.9.220 port 37863:11: disconnected by user [preauth]
+Apr 17 23:31:04 arenal sshd[27916]: Disconnected from 116.52.9.220 port 37863 [preauth]
+Apr 17 23:31:04 arenal sshd[27916]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=116.52.9.220  user=root
+Apr 17 23:59:22 arenal sshd[30007]: Invalid user recepcao from 200.54.214.85 port 20449
+Apr 17 23:59:22 arenal sshd[30007]: input_userauth_request: invalid user recepcao [preauth]
+Apr 17 23:59:22 arenal sshd[30007]: pam_unix(sshd:auth): check pass; user unknown
+Apr 17 23:59:22 arenal sshd[30007]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=200.54.214.85
+Apr 17 23:59:24 arenal sshd[30007]: Failed password for invalid user recepcao from 200.54.214.85 port 20449 ssh2
+Apr 17 23:59:24 arenal sshd[30007]: Connection closed by 200.54.214.85 port 20449 [preauth]
+Apr 18 00:01:34 arenal sshd[30215]: Connection reset by 218.92.0.175 port 60308 [preauth]
+Apr 18 01:34:56 arenal sshd[5004]: Did not receive identification string from 116.52.9.220 port 51554
+Apr 18 01:53:18 arenal sshd[6308]: Connection reset by 218.92.0.138 port 33028 [preauth]
+Apr 18 02:08:24 arenal sshd[7496]: Invalid user vcortez from 190.117.104.87 port 6664
+Apr 18 02:08:24 arenal sshd[7496]: input_userauth_request: invalid user vcortez [preauth]
+Apr 18 02:08:24 arenal sshd[7496]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 02:08:24 arenal sshd[7496]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.117.104.87
+Apr 18 02:08:26 arenal sshd[7496]: Failed password for invalid user vcortez from 190.117.104.87 port 6664 ssh2
+Apr 18 02:08:26 arenal sshd[7496]: Connection closed by 190.117.104.87 port 6664 [preauth]
+Apr 18 03:13:59 arenal sshd[12295]: Connection reset by 218.92.0.138 port 24913 [preauth]
