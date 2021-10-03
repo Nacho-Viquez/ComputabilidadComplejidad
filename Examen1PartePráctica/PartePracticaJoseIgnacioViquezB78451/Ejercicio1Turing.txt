@@ -1,0 +1,48 @@
+;Jose Ignacio Viquez B78451
+
+
+; Machine starts in state 0.
+
+; State 0: read the leftmost symbol
+0 _ * r A
+
+; Estado del primer caracter
+A * : r B
+A $ * r B1
+A _ _ r Fin
+
+; Estado B, cuenta en 1
+B * * r C
+B $ * r C1
+B _ _ r Fin
+
+;Estado C, cuenta en 2
+C * * r D
+C $ * r D1
+C _ _ r Fin
+
+
+;Estado D, cuenta en 3
+D * : r B
+D $ * r B1
+D _ _ r Fin
+
+;Estado B1, cuenta en 1 en pausa
+B1 * * r C1
+B1 $ * r C
+B1 _ * r Fin
+
+;Estado C1, cuenta en 2 en pausa 
+C1 * * r D1
+C1 $ * r D
+C1 _ * r Fin
+ 
+;Estado D1, cuenta en 3 en pausa 
+D1 * * r B1
+D1 $ * r B
+D1 _ * r Fin
+
+
+;Estado Fin, se acabo la hilera 
+Fin * * l halt-accept 
+

@@ -1,0 +1,7 @@
+Parte A:
+sed -e 's/(\([0-9]*\))/-\1/g' pruebaParteA.txt
+
+Parte B: 
+sed -e 's/(\([0-9]*\))/-\1/g' pruebaParteB.txt | awk -f AWKJoseIgnacioVIquezB78451.awk
+
+Se agrega tambien por aparte como se solicito el .sh para ejecutar ambos comandos. En el archivo llamado scriptJoseIgnacioViquezB78451.sh.
