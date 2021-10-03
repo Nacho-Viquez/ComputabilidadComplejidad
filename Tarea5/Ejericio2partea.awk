@@ -1,4 +1,4 @@
-#awk -f Ejericio2partea.awk badLoginArenal.txt secure secure-202110418 secure-20210426 secure-20210502 secure 20210510
+#awk -f Ejericio2partea.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
 BEGIN{
 	FS= " ";
 	
@@ -44,5 +44,5 @@ END{
 		print arregloIPS[key] "\t" arregloArenal[key] "\t" arregloSecure[key]"\t" arregloAmbos[key]
 	}
 
-	print length(arregloIPS)
+	#print length(arregloIPS)
 }

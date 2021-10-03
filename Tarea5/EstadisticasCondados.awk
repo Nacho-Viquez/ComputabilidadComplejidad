@@ -16,7 +16,8 @@ BEGIN{
 }
 {
 if (NR!=1){
-	print $1 "\t" ($2 / $4) "\t" ($3 / ($3+$4))
+	print $1 "\t" ($2 / $4) "\t" ((($3*100)) / ($3+$4))
+	
 	if(valorMayorPoblacion < ($2 / $4)){
 		valorMayorPoblacion = ($2 / $4)
 		nombreMayorDensidadPoblacional = $1
@@ -25,13 +26,13 @@ if (NR!=1){
 		valorMenorPoblacion = ($2 / $4)
 		nombreMenorDensidadPoblacional = $1
 
-	}else if (valorMayorAgua < ($3 / ($3+$4)) ){
-		valorMayorAgua = ($3 / ($3+$4))
+	}else if (valorMayorAgua < ((($3*100)) / ($3+$4)) ){
+		valorMayorAgua = (($3) / ($3+$4))
 		nombreMayorCantidadAgua = $1
 
 
-	}else if (valorMenorAgua ){
-		valorMenorAgua = ($3 / ($3+$4))
+	}else if (valorMenorAgua > (($3*100) / ($3+$4))){
+		valorMenorAgua = (($3*100) / ($3+$4))
 		nombreMenorCantidadAgua = $1
 	}
 }
