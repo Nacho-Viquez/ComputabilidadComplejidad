@@ -11,29 +11,30 @@ BEGIN{
 	valorMayorAgua = 0;
 
 	nombreMenorCantidadAgua = "hola";
-	valorMenorAgua= 10;
+	valorMenorAgua= 1;
 	#print "Nombre Condado" "\t" "Densidad Poblacional" "\t" "Porcentaje de agua"
 	printf "Nombre Condado\tDensidad Poblacional\tPorcentaje Agua\n"
 }
 {
 if (NR!=1){
 	#print $1 "\t" ($2 / $4) "\t" ($3*100) / ($3+$4);
-	printf"%s\t%s\t%s\n", $1, ($2 / $4), ($3*100) / ($3+$4);
+
+	printf"%s\t%s\t%s\n", $1, ($2 / $4), $3 / ($3+$4);
+
 	if(valorMayorPoblacion < ($2 / $4)){
 		valorMayorPoblacion = ($2 / $4)
 		nombreMayorDensidadPoblacional = $1
-
-	}else if (valorMenorPoblacion > ($2 / $4)){
+	}
+	if (valorMenorPoblacion > ($2 / $4)){
 		valorMenorPoblacion = ($2 / $4)
 		nombreMenorDensidadPoblacional = $1
-
-	}else if (valorMayorAgua < ((($3*100)) / ($3+$4)) ){
+	}
+	if (valorMayorAgua < (($3) / ($3+$4)) ){
 		valorMayorAgua = (($3) / ($3+$4))
 		nombreMayorCantidadAgua = $1
-
-
-	}else if (valorMenorAgua > (($3*100) / ($3+$4))){
-		valorMenorAgua = (($3*100) / ($3+$4))
+	}
+	if (valorMenorAgua > (($3) / ($3+$4))){
+		valorMenorAgua = (($3) / ($3+$4));
 		nombreMenorCantidadAgua = $1
 	}
 }

@@ -1,8 +1,8 @@
-#awk -f Ejericio2parteb.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
+#gawk -f Ejericio2parteb.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
 
 BEGIN{
 	FS= " ";
-	print "IP" "\t" "CantidadAtaques";
+	print "IP" "\t\t" "CantidadAtaques";
 }
 
 function compararFechas(fecha1, fecha2){
@@ -142,20 +142,31 @@ END{
 		cantidadAtaques = length(a);
 		arregloCantidadAtaquesFinal[key] = cantidadAtaques;
 	}
-	for (key in arregloIPS){
-		print key "\t" arregloCantidadAtaquesFinal[key];
+	for(key in arregloIPS){
+		#print key "\t" arregloCantidadAtaquesFinal[key];
 	}
 
-	n = asort(arregloCantidadAtaquesFinal, dest);
-	for(llave in dest){
-		print "Llave: "llave "Valor:" dest[llave];
-	}
+	#n = asort(arregloCantidadAtaquesFinal, dest);
+	#for(llave in dest){
+	#	print "Llave: "llave "Valor:" dest[llave];
+	#}
 
 
-	for(key in arregloTiempoArenal){
-		#print "Hilera del arreglo del tiempo para la IP: "arregloIPS[key] " es: " arregloTiempoArenal[key];
+
+	for(key in arregloCantidadAtaquesFinal){
+		ipConIntentos[sprintf("%10s",arregloCantidadAtaquesFinal[key])"-"key]= key;
 	}
-	print "----------------------------------";
+
+	#Ordenar las IPs por el numero de intentos
+	asorti(ipConIntentos,ipConINtentosOrdenados);
+	cantidad = 1;
+
+	for(i=length(ipConINtentosOrdenados); i>=1;i--){
+		split(ipConINtentosOrdenados[i],ipOriginal,"-");
+		printf("%s\t%s\n",ipOriginal[2], arregloCantidadAtaquesFinal[ipOriginal[2]]);
+		#printf("Filed Loggins: %s \n",arregloCantidadAtaquesFinal[ipOriginal[2]]);
+
+	}
 
 	#print length(arregloIPS)
 }
