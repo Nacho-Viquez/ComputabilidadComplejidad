@@ -12,12 +12,13 @@ BEGIN{
 
 	nombreMenorCantidadAgua = "hola";
 	valorMenorAgua= 10;
-	print "Nombre Condado" "\t" "Densidad Poblacional" "\t" "Porcentaje de agua"
+	#print "Nombre Condado" "\t" "Densidad Poblacional" "\t" "Porcentaje de agua"
+	printf "Nombre Condado\tDensidad Poblacional\tPorcentaje Agua\n"
 }
 {
 if (NR!=1){
-	print $1 "\t" ($2 / $4) "\t" ((($3*100)) / ($3+$4))
-	
+	#print $1 "\t" ($2 / $4) "\t" ($3*100) / ($3+$4);
+	printf"%s\t%s\t%s\n", $1, ($2 / $4), ($3*100) / ($3+$4);
 	if(valorMayorPoblacion < ($2 / $4)){
 		valorMayorPoblacion = ($2 / $4)
 		nombreMayorDensidadPoblacional = $1

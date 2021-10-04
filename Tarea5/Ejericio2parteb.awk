@@ -1,9 +1,4 @@
-#awk -f Ejericio2partea.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
-#Pasos 
-# 1. Guardar las fechas en un arreglo de fechas
-# 2. Hacer el método que compara fechas 
-# 3. Sumar solo si 2 es falso 
-
+#awk -f Ejericio2parteb.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
 
 BEGIN{
 	FS= " ";
@@ -147,9 +142,13 @@ END{
 		cantidadAtaques = length(a);
 		arregloCantidadAtaquesFinal[key] = cantidadAtaques;
 	}
-
 	for (key in arregloIPS){
-		print arregloIPS[key] "\t" arregloCantidadAtaquesFinal[key];
+		print key "\t" arregloCantidadAtaquesFinal[key];
+	}
+
+	n = asort(arregloCantidadAtaquesFinal, dest);
+	for(llave in dest){
+		print "Llave: "llave "Valor:" dest[llave];
 	}
 
 
