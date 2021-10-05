@@ -1,4 +1,4 @@
-#gawk -f Ejericio2parteb.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
+#Comando para ejecutar: gawk -f Ejericio2parteb.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
 
 BEGIN{
 	FS= " ";
@@ -146,10 +146,7 @@ END{
 		#print key "\t" arregloCantidadAtaquesFinal[key];
 	}
 
-	#n = asort(arregloCantidadAtaquesFinal, dest);
-	#for(llave in dest){
-	#	print "Llave: "llave "Valor:" dest[llave];
-	#}
+
 
 
 

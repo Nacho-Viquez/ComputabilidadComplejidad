@@ -1,4 +1,4 @@
-#awk -f EstadisticasCondados.awk  censo2000.txt
+#Comando para ejecutar el programa: awk -f EstadisticasCondados.awk  censo2000.txt
 BEGIN{
 	FS= "\t";
 	nombreMayorDensidadPoblacional = "hola";

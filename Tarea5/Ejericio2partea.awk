@@ -1,4 +1,4 @@
-#awk -f Ejericio2partea.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
+#Comando para ejecutar: awk -f Ejericio2partea.awk badLoginArenal.txt secure secure-20210418 secure-20210426 secure-20210502 secure-20210510
 BEGIN{
 	FS= " ";
 	
