@@ -17,9 +17,8 @@ BEGIN{
 }
 {
 if (NR!=1){
-	#print $1 "\t" ($2 / $4) "\t" ($3*100) / ($3+$4);
 
-	printf"%s\t%s\t%s\n", $1, ($2 / $4), $3 / ($3+$4);
+	printf"%s\t\t%s\t\t\t%s\n", $1, ($2 / $4), (($3) / ($3+$4))*100;
 
 	if(valorMayorPoblacion < ($2 / $4)){
 		valorMayorPoblacion = ($2 / $4)
@@ -29,12 +28,12 @@ if (NR!=1){
 		valorMenorPoblacion = ($2 / $4)
 		nombreMenorDensidadPoblacional = $1
 	}
-	if (valorMayorAgua < (($3) / ($3+$4)) ){
-		valorMayorAgua = (($3) / ($3+$4))
+	if (valorMayorAgua < (($3) / ($3+$4))*100 ){
+		valorMayorAgua = (($3) / ($3+$4))*100;
 		nombreMayorCantidadAgua = $1
 	}
-	if (valorMenorAgua > (($3) / ($3+$4))){
-		valorMenorAgua = (($3) / ($3+$4));
+	if (valorMenorAgua > (($3) / ($3+$4))*100){
+		valorMenorAgua = (($3) / ($3+$4))*100;
 		nombreMenorCantidadAgua = $1
 	}
 }

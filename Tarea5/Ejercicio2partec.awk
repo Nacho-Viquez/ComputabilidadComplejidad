@@ -164,16 +164,16 @@ END{
 			comando = "whois "ipOriginal[2];
 			#print "Comando: " comando;
 			while((comando | getline) > 0){
-				if ((/[Cc]ountry/) && (vezPais == 0)){
+				if ((/^[Cc]ountry/) && (vezPais == 0)){
 					print;
 					vezPais = 1;
-				}else if ((/City/) && (vezCiudad == 0)){
+				}else if ((/^[Cc]ity/) && (vezCiudad == 0)){
 					print;
 					vezCiudad = 1;
-				}else if((/[Nn]et[Nn]ame/) && (vezRed == 0) ){
+				}else if((/^[Nn]et[Nn]ame/) && (vezRed == 0) ){
 					print;
 					vezRed = 1;
-				}else if ((/[Aa]ddress:/) && (vezUbicacion == 0) ){
+				}else if ((/^[Aa]ddress/) && (vezUbicacion == 0) ){
 					print;
 					vezUbicacion = 1;
 				}
