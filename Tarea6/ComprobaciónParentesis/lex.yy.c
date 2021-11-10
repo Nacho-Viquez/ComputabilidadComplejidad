@@ -755,18 +755,18 @@ YY_RULE_SETUP
 /* operators, parentesis miedo */ 
 case 6:
 YY_RULE_SETUP
-#line 19 "bas.l"
+#line 18 "bas.l"
 { return *yytext; } 
 	YY_BREAK
 /* anything else is an error */ 
 case 7:
 YY_RULE_SETUP
-#line 24 "bas.l"
+#line 22 "bas.l"
 yyerror("invalid character"); 
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 27 "bas.l"
+#line 24 "bas.l"
 ECHO;
 	YY_BREAK
 #line 773 "lex.yy.c"
@@ -1774,9 +1774,8 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "bas.l"
+#line 24 "bas.l"
 
- 
 int yywrap(void) { 
     return 1; 
 

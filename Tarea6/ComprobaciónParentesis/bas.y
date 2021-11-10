@@ -1,7 +1,8 @@
 %{ 
+    #include <stdio.h>
+
     void yyerror(char *); 
     int yylex(void); 
-    int sym[26]; 
 %} 
 
 %token ZERO UNO DOS TRES Fin
@@ -9,21 +10,19 @@
 %% 
 
 eval: 
-    C Fin {printf("Hola!\n "); return 0;}
+    C Fin {printf("Aceptada!\n "); return 0;}
     ;
 
 C:  C C
-    |'[' C ']'                
-    | '['']'                  
-    | '('')'    
-    | '(' C ')' 
+    |'[' C ']'                   
+    |'(' C ')' 
     | A B
     | 
     ;
 
 
 A:  ZERO A UNO 
-    | DOS 
+    | DOS
     ;
 
 B:  UNO B
@@ -33,7 +32,7 @@ B:  UNO B
 %% 
 void yyerror(char *s) { 
     printf("La expresion es invalida\n"); 
-    return 0; 
+     
 } 
  
 int main(void) { 
