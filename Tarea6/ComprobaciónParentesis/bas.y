@@ -1,11 +1,11 @@
 %{ 
     #include <stdio.h>
 
-    void yyerror(char *); 
+    int yyerror(char *); 
     int yylex(void); 
 %} 
 
-%token ZERO UNO DOS TRES Fin
+%token ZERO UNO DOS TRES Fin Rechazo
 
 %% 
 
@@ -30,9 +30,9 @@ B:  UNO B
     ;
 
 %% 
-void yyerror(char *s) { 
+int yyerror(char *s) { 
     printf("La expresion es invalida\n"); 
-     
+    return 0;
 } 
  
 int main(void) { 

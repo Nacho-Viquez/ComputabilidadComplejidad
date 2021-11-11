@@ -53,7 +53,8 @@ extern int yydebug;
     UNO = 259,
     DOS = 260,
     TRES = 261,
-    Fin = 262
+    Fin = 262,
+    Rechazo = 263
   };
 #endif
 /* Tokens.  */
@@ -62,6 +63,7 @@ extern int yydebug;
 #define DOS 260
 #define TRES 261
 #define Fin 262
+#define Rechazo 263
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

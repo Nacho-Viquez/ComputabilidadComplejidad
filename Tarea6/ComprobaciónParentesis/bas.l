@@ -18,7 +18,7 @@
  
 
     /* anything else is an error */ 
-.  yyerror("invalid character"); 
+.  {return Rechazo;}
 
 %% 
 int yywrap(void) { 
