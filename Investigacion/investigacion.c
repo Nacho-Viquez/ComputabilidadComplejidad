@@ -6,19 +6,16 @@
 
 
 int matris[3][6] = {};
-int  fila = 3;
-int  columna = 6;
+int fila = 3;
+int columna = 6;
 int seed = 10395922; // Numero aleatorio para los numeros generados 
-int rango_velocidad = 12; // Rango para la velocidad
 int cantidad_iteraciones = 500;
 int iteraciones_mejor_solucion = 0;
-
-
+int coeficiente_inercia = 1;
+int coeficiente_aceleracion = 2;
 int menor_X_global = 99999;
 int menor_Y_global = 99999;
 double menor_global = 9999.99;
-
-
 
 int imprimir(){
 	for (int i = 0; i < fila; i++)
@@ -31,7 +28,6 @@ int imprimir(){
 	}
 	printf("menor_X_global: %d\n",menor_X_global);
 	printf("menor_Y_global: %d\n",menor_Y_global);
-	printf("Hola mundo\n");
 	return 0;
 }
 
@@ -41,7 +37,6 @@ int numero_aleatorio(int rango){
 	if (negativo < 0.5){
 		num = num * -1;
 	}
-
 	return num;
 }
 
@@ -50,12 +45,10 @@ double calcular_funcion(int x,int y){
 	return resultado;
 }
 
-int main(int argc, char const *argv[])
-{
-	srand(seed); 
+int main(int argc, char const *argv[]){
+	srand(time(NULL)); 
 	// Iniciacion valores para las particulas 
-	for (int i = 0; i <fila; ++i)
-	{
+	for (int i = 0; i <fila; ++i){
 		//Inicializacion de parametros de coordenadas
 		matris[i][0] = numero_aleatorio(1000); //Coordenada X
 		matris[i][1] = numero_aleatorio(1000); //Coordenada Y
@@ -65,13 +58,12 @@ int main(int argc, char const *argv[])
 		matris[i][3] = matris[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matris[i][4] = numero_aleatorio(rango_velocidad);
-		matris[i][5] = numero_aleatorio(rango_velocidad);
+		matris[i][4] = 0;
+		matris[i][5] = 0;
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
-	for (int i = 0; i < fila; ++i)
-	{
+	for (int i = 0; i < fila; ++i){
 		double evaluacion = calcular_funcion(matris[i][0],matris[i][1]);
 		printf("La evaluacion para %d dio: %f\n",i, evaluacion );
 		if (evaluacion < menor_global){
@@ -110,8 +102,26 @@ int main(int argc, char const *argv[])
 				} 
 
 			}
-			//Ajustar la velocidad y posicion de la particula i
-			//Parte KEVIN
+			//Ajustar la velocidad de la particula i
+			matris[i][4] = coeficiente_inercia * matris[i][4] +
+				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (matris[i][2] - matris[i][0]) +
+				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (menor_X_global - matris[i][0]);
+			matris[i][5] = coeficiente_inercia*matris[i][5] +
+				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (matris[i][3] - matris[i][1]) +
+				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (menor_Y_global - matris[i][1]);
+			//Ajustar la posicion de la particula i
+			matris[i][0] = matris[i][0] + matris[i][4];
+			matris[i][1] = matris[i][1] + matris[i][5];
+			if(matris[i][0] > 1000){
+				matris[i][0] = matris[i][0] - 2000;
+			}else if (matris[i][0] < -1000){
+				matris[i][0] = matris[i][0] + 2000;
+			}
+			if(matris[i][1] > 1000){
+				matris[i][1] = matris[i][1] - 2000;
+			}else if (matris[i][1] < -1000){
+				matris[i][1] = matris[i][1] + 2000;
+			}
 		}
 
 		iteraciones_mejor_solucion = iteraciones_mejor_solucion + 1;
