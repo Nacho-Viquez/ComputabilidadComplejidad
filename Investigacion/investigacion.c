@@ -1,39 +1,60 @@
 //Linea para ejecutar: gcc investigacion.c -o investigacion -lm
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
 
 
-int matris[3][6] = {};
+double matris[3][6] = {};
 int fila = 3;
 int columna = 6;
 int seed = 10395922; // Numero aleatorio para los numeros generados 
-int cantidad_iteraciones = 500;
+int cantidad_iteraciones = 300;
+int cantidad_coordenadas = 300;
+
 int iteraciones_mejor_solucion = 0;
 int coeficiente_inercia = 1;
 int coeficiente_aceleracion = 2;
-int menor_X_global = 99999;
-int menor_Y_global = 99999;
+double menor_X_global = 99999;
+double menor_Y_global = 99999;
 double menor_global = 9999.99;
+
+
+//Graficación
+double coordinadas_X_particula_1[300] = {};
+double coordinadas_Y_particula_1[300] = {};
+
+double coordinadas_X_particula_2[300] = {};
+double coordinadas_Y_particula_2[300] = {};
+
+double coordinadas_X_particula_3[300] = {};
+double coordinadas_Y_particula_3[300] = {};
+
+double coordinadas_X_particula_4[300] = {};
+double coordinadas_Y_particula_4[300] = {};
+
+double coordinadas_X_particula_5[300] = {};
+double coordinadas_Y_particula_5[300] = {};
+
 
 int imprimir(){
 	for (int i = 0; i < fila; i++)
 	{
 		for (int j = 0; j < columna; j++)
 		{
-			printf("matris[%d][%d] = %d \n",i,j, matris[i][j]);
+			printf("matris[%d][%d] = %lf \n",i,j, matris[i][j]);
 		}
 		printf("-\n");
 	}
-	printf("menor_X_global: %d\n",menor_X_global);
-	printf("menor_Y_global: %d\n",menor_Y_global);
+	printf("menor_X_global: %f\n",menor_X_global);
+	printf("menor_Y_global: %f\n",menor_Y_global);
 	return 0;
 }
 
-int numero_aleatorio(int rango){
-	int num = rand() % rango;
-	float negativo = (double)rand() / (double)RAND_MAX;
+double numero_aleatorio(int rango){
+	double num = rand() % rango;
+	double negativo = (double)rand() / (double)RAND_MAX;
 	if (negativo < 0.5){
 		num = num * -1;
 	}
@@ -44,6 +65,16 @@ double calcular_funcion(int x,int y){
 	double resultado = sin(x/180 - 4)/ ((x*x)/100000 + 1 ) + (x*x)/500000 + cos(y/100 -1)/((y*y)/1000000 + 1) + (y*y)/500000;
 	return resultado;
 }
+
+
+void escribir_archivo(FILE* fp,double valor)
+{
+
+
+	fprintf(fp, "%f\n", valor);
+
+}
+
 
 int main(int argc, char const *argv[]){
 	srand(time(NULL)); 
@@ -58,8 +89,8 @@ int main(int argc, char const *argv[]){
 		matris[i][3] = matris[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matris[i][4] = 0;
-		matris[i][5] = 0;
+		matris[i][4] = numero_aleatorio(10);
+		matris[i][5] = numero_aleatorio(10);
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
@@ -73,11 +104,36 @@ int main(int argc, char const *argv[]){
 		}
 	}
 
+
+
 	//Ciclo principal del algoritmo
-	while((cantidad_iteraciones != 0) ){
+	while(cantidad_iteraciones != 0 ){
 		printf("Iteración: %d\n",cantidad_iteraciones );
+
+		//Graficación
+		coordinadas_X_particula_1[cantidad_coordenadas - cantidad_iteraciones] = matris[0][0];
+		coordinadas_Y_particula_1[cantidad_coordenadas - cantidad_iteraciones] = matris[0][1];
+
+		coordinadas_X_particula_2[cantidad_coordenadas - cantidad_iteraciones] = matris[1][0];
+		coordinadas_Y_particula_2[cantidad_coordenadas - cantidad_iteraciones] = matris[1][1];
+
+		coordinadas_X_particula_3[cantidad_coordenadas - cantidad_iteraciones] = matris[2][0];
+		coordinadas_Y_particula_3[cantidad_coordenadas - cantidad_iteraciones] = matris[2][1];
+
+		coordinadas_X_particula_4[cantidad_coordenadas - cantidad_iteraciones] = matris[3][0];
+		coordinadas_Y_particula_4[cantidad_coordenadas - cantidad_iteraciones] = matris[3][1];
+
+		coordinadas_X_particula_5[cantidad_coordenadas - cantidad_iteraciones] = matris[4][0];
+		coordinadas_Y_particula_5[cantidad_coordenadas - cantidad_iteraciones] = matris[4][1];
+
+
+
 		for (int i = 0; i < fila; i++)
 		{
+			//Guardar posiciones
+
+
+
 			//Calcular la función para la posicion actual de la particula i
 			double evaluacion = calcular_funcion(matris[i][0],matris[i][1]);
 
@@ -104,35 +160,52 @@ int main(int argc, char const *argv[]){
 			}
 			//Ajustar la velocidad de la particula i
 			matris[i][4] = coeficiente_inercia * matris[i][4] +
-				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (matris[i][2] - matris[i][0]) +
-				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (menor_X_global - matris[i][0]);
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (matris[i][2] - matris[i][0]) +
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (menor_X_global - matris[i][0]);
 			matris[i][5] = coeficiente_inercia*matris[i][5] +
-				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (matris[i][3] - matris[i][1]) +
-				coeficiente_aceleracion * ((float)rand()/(float)RAND_MAX) * (menor_Y_global - matris[i][1]);
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (matris[i][3] - matris[i][1]) +
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (menor_Y_global - matris[i][1]);
 			//Ajustar la posicion de la particula i
 			matris[i][0] = matris[i][0] + matris[i][4];
+			
 			matris[i][1] = matris[i][1] + matris[i][5];
-			if(matris[i][0] > 1000){
-				matris[i][0] = matris[i][0] - 2000;
-			}else if (matris[i][0] < -1000){
-				matris[i][0] = matris[i][0] + 2000;
+			while ((matris[i][0] > 1000)||(matris[i][0] < -1000)||(matris[i][1] > 1000) || (matris[i][1] < -1000)){
+				if(matris[i][0] > 1000){
+					matris[i][0] = matris[i][0] - 2000;
+				}else if (matris[i][0] < -1000){
+					matris[i][0] = matris[i][0] + 2000;
+				}
+				if(matris[i][1] > 1000){
+					matris[i][1] = matris[i][1] - 2000;
+				}else if (matris[i][1] < -1000){
+					matris[i][1] = matris[i][1] + 2000;
+				}
 			}
-			if(matris[i][1] > 1000){
-				matris[i][1] = matris[i][1] - 2000;
-			}else if (matris[i][1] < -1000){
-				matris[i][1] = matris[i][1] + 2000;
-			}
+
 		}
+
+
 
 		iteraciones_mejor_solucion = iteraciones_mejor_solucion + 1;
 		cantidad_iteraciones = cantidad_iteraciones - 1;
 		if (iteraciones_mejor_solucion == 100){
 			// Terminamos la ejecucion
+			cantidad_coordenadas = cantidad_coordenadas -cantidad_iteraciones;
 			cantidad_iteraciones = 0;
 		}
-
 	}
 
+
+	//Archivo
+	FILE* fp;
+	fp = fopen("prueba.txt","w");
+	for (int j = 0; j < cantidad_coordenadas; j++)
+	{
+		escribir_archivo(fp,coordinadas_X_particula_1[j]);
+	}
+	fclose(fp);		
+
+	printf("-\n");
 
 	imprimir();
 	return 0;
