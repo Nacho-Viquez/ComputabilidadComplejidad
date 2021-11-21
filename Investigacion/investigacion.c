@@ -10,11 +10,11 @@ double matris[3][6] = {};
 int fila = 3;
 int columna = 6;
 int seed = 10395922; // Numero aleatorio para los numeros generados 
-int cantidad_iteraciones = 300;
-int cantidad_coordenadas = 300;
+int cantidad_iteraciones = 150;
+int cantidad_coordenadas = 150;
 
 int iteraciones_mejor_solucion = 0;
-int coeficiente_inercia = 1;
+int coeficiente_inercia = 5;
 int coeficiente_aceleracion = 2;
 double menor_X_global = 99999;
 double menor_Y_global = 99999;
@@ -24,8 +24,19 @@ double menor_global = 9999.99;
 
 
 //Graficación
-double coordenadas_X[3][300] = {}; // Matriz de coordenadas
-double coordenadas_Y[3][300] = {}; // Matriz de coordenadas
+double coordenadas_X[3][150] = {}; // Matriz de coordenadas
+double coordenadas_Y[3][150] = {}; // Matriz de coordenadas
+
+//Prueba 
+double puntuaciones[3][150] = {};
+
+
+double calcular_funcion(double x,double y){
+	double resultado = sin(x/(180 - 4))/ ((x*x)/1500 + 1 ) + (x*x)/500000 + cos((y/100) -1)/((y*y)/15000 + 1) + (y*y)/500000;
+	return resultado;
+}
+
+
 
 int imprimir(){
 	for (int i = 0; i < fila; i++)
@@ -38,6 +49,8 @@ int imprimir(){
 	}
 	printf("menor_X_global: %f\n",menor_X_global);
 	printf("menor_Y_global: %f\n",menor_Y_global);
+	double respuesta = calcular_funcion(menor_X_global,menor_Y_global);
+	printf("Menor evaluación: %f\n",respuesta );
 	return 0;
 }
 
@@ -50,11 +63,6 @@ double numero_aleatorio(int rango){
 	return num;
 }
 
-double calcular_funcion(int x,int y){
-	double resultado = sin(x/180 - 4)/ ((x*x)/100000 + 1 ) + (x*x)/500000 + cos(y/100 -1)/((y*y)/1000000 + 1) + (y*y)/500000;
-	return resultado;
-}
-
 
 void escribir_archivo(FILE* fp,double valor_x, double valor_y)
 {
@@ -64,7 +72,7 @@ void escribir_archivo(FILE* fp,double valor_x, double valor_y)
 
 
 int main(int argc, char const *argv[]){
-	srand(time(NULL)); 
+	srand(seed); 
 	// Iniciacion valores para las particulas 
 	for (int i = 0; i <fila; ++i){
 		//Inicializacion de parametros de coordenadas
@@ -76,8 +84,8 @@ int main(int argc, char const *argv[]){
 		matris[i][3] = matris[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matris[i][4] = numero_aleatorio(10);
-		matris[i][5] = numero_aleatorio(10);
+		matris[i][4] = numero_aleatorio(120);
+		matris[i][5] = numero_aleatorio(120);
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
@@ -104,6 +112,9 @@ int main(int argc, char const *argv[]){
 			coordenadas_X[i][cantidad_coordenadas - cantidad_iteraciones] = matris[i][0]; // OJO
 			coordenadas_Y[i][cantidad_coordenadas - cantidad_iteraciones] = matris[i][1];
 
+			//Prueba 
+			puntuaciones[i][cantidad_coordenadas - cantidad_iteraciones] = calcular_funcion(matris[i][0],matris[i][1]);
+
 
 
 			//Calcular la función para la posicion actual de la particula i
@@ -120,7 +131,9 @@ int main(int argc, char const *argv[]){
 			//Comprobacion con la mejor solucion global si no cambia la solucion global aumentar el contador de iteraciones de la solucion global
 			if(evaluacion < menor_global){
 				double diferencia_evaluaciones = menor_global - evaluacion; 
-				if (0.0001 <= diferencia_evaluaciones){
+				printf("Diferencia de evaluaciones:%f\n",diferencia_evaluaciones );
+				if (diferencia_evaluaciones <= 0.0001){
+					printf("Hola entre---------------------------\n");
 					menor_global = evaluacion;
 					menor_X_global = matris[i][0];
 					menor_Y_global = matris[i][1];
@@ -184,6 +197,19 @@ int main(int argc, char const *argv[]){
 		fclose(fp);
 	}
 	
+	//Prueba
+	for (int i = 0; i < fila; ++i)
+	{
+		FILE* fp;
+		char nombreArchivo[20];
+		sprintf(nombreArchivo, "prueba_%d",i);
+		fp = fopen(nombreArchivo, "w");
+		for (int j = 0; j < cantidad_coordenadas; ++j)
+		{
+			fprintf(fp, "%f \n", puntuaciones[i][j]);
+		}
+		fclose(fp);
+	}
 
 	imprimir();
 	return 0;
