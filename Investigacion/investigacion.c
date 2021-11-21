@@ -27,23 +27,6 @@ double menor_global = 9999.99;
 double coordenadas_X[3][300] = {}; // Matriz de coordenadas
 double coordenadas_Y[3][300] = {}; // Matriz de coordenadas
 
-
-double coordinadas_X_particula_1[300] = {};
-double coordinadas_Y_particula_1[300] = {};
-
-double coordinadas_X_particula_2[300] = {};
-double coordinadas_Y_particula_2[300] = {};
-
-double coordinadas_X_particula_3[300] = {};
-double coordinadas_Y_particula_3[300] = {};
-
-double coordinadas_X_particula_4[300] = {};
-double coordinadas_Y_particula_4[300] = {};
-
-double coordinadas_X_particula_5[300] = {};
-double coordinadas_Y_particula_5[300] = {};
-
-
 int imprimir(){
 	for (int i = 0; i < fila; i++)
 	{
@@ -113,24 +96,6 @@ int main(int argc, char const *argv[]){
 	//Ciclo principal del algoritmo
 	while(cantidad_iteraciones != 0 ){
 		printf("Iteración: %d\n",cantidad_iteraciones );
-
-		/*
-		coordinadas_X_particula_1[cantidad_coordenadas - cantidad_iteraciones] = matris[0][0];
-		coordinadas_Y_particula_1[cantidad_coordenadas - cantidad_iteraciones] = matris[0][1];
-
-		coordinadas_X_particula_2[cantidad_coordenadas - cantidad_iteraciones] = matris[1][0];
-		coordinadas_Y_particula_2[cantidad_coordenadas - cantidad_iteraciones] = matris[1][1];
-
-		coordinadas_X_particula_3[cantidad_coordenadas - cantidad_iteraciones] = matris[2][0];
-		coordinadas_Y_particula_3[cantidad_coordenadas - cantidad_iteraciones] = matris[2][1];
-
-		coordinadas_X_particula_4[cantidad_coordenadas - cantidad_iteraciones] = matris[3][0];
-		coordinadas_Y_particula_4[cantidad_coordenadas - cantidad_iteraciones] = matris[3][1];
-
-		coordinadas_X_particula_5[cantidad_coordenadas - cantidad_iteraciones] = matris[4][0];
-		coordinadas_Y_particula_5[cantidad_coordenadas - cantidad_iteraciones] = matris[4][1];
-		*/
-
 
 		for (int i = 0; i < fila; i++)
 		{
@@ -203,16 +168,7 @@ int main(int argc, char const *argv[]){
 	}
 
 
-	//Prueba de coordenadas
-	for (int i = 0; i < fila; i++)
-	{
-		for (int j = 0; j < cantidad_coordenadas; j++)
-		{
-			printf("coordenadas_X[%d][%d] = %lf \n",i,j, coordenadas_X[i][j]);
-			printf("coordenadas_Y[%d][%d] = %lf \n",i,j, coordenadas_Y[i][j]);
-		}
-		printf("-\n");
-	}
+
 
 	// Creacion de archivos 
 	for (int i = 0; i < fila; ++i)
@@ -228,8 +184,7 @@ int main(int argc, char const *argv[]){
 		fclose(fp);
 	}
 	
-	printf("----------------------\n");
 
-	//imprimir();
+	imprimir();
 	return 0;
 }
