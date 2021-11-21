@@ -6,16 +6,16 @@
 #include <math.h>
 
 
-double matris[3][6] = {};
+double matriz[3][6] = {};
 int fila = 3;
 int columna = 6;
 int seed = 10395922; // Numero aleatorio para los numeros generados 
-int cantidad_iteraciones = 150;
-int cantidad_coordenadas = 150;
+int cantidad_iteraciones = 500;
+int cantidad_coordenadas = 500;
 
 int iteraciones_mejor_solucion = 0;
-int coeficiente_inercia = 5;
-int coeficiente_aceleracion = 2;
+double coeficiente_inercia = 0.73;
+double coeficiente_aceleracion = 2.025;
 double menor_X_global = 99999;
 double menor_Y_global = 99999;
 double menor_global = 9999.99;
@@ -24,15 +24,15 @@ double menor_global = 9999.99;
 
 
 //Graficación
-double coordenadas_X[3][150] = {}; // Matriz de coordenadas
-double coordenadas_Y[3][150] = {}; // Matriz de coordenadas
+double coordenadas_X[3][500] = {}; // Matriz de coordenadas
+double coordenadas_Y[3][500] = {}; // Matriz de coordenadas
 
 //Prueba 
-double puntuaciones[3][150] = {};
+double puntuaciones[3][500] = {};
 
 
 double calcular_funcion(double x,double y){
-	double resultado = sin(x/(180 - 4))/ ((x*x)/1500 + 1 ) + (x*x)/500000 + cos((y/100) -1)/((y*y)/15000 + 1) + (y*y)/500000;
+	double resultado = sin((x/180) - 4)/ (((x*x)/100000) + 1 ) + (x*x)/500000 + cos((y/100) -1)/(((y*y)/1000000) + 1) + (y*y)/500000;
 	return resultado;
 }
 
@@ -43,7 +43,7 @@ int imprimir(){
 	{
 		for (int j = 0; j < columna; j++)
 		{
-			printf("matris[%d][%d] = %lf \n",i,j, matris[i][j]);
+			printf("matriz[%d][%d] = %lf \n",i,j, matriz[i][j]);
 		}
 		printf("-\n");
 	}
@@ -57,7 +57,8 @@ int imprimir(){
 double numero_aleatorio(int rango){
 	double num = rand() % rango;
 	double negativo = (double)rand() / (double)RAND_MAX;
-	if (negativo < 0.5){
+	//printf("Probabilidad de numero negativo es: %f\n",negativo );
+	if (negativo <= 0.5){
 		num = num * -1;
 	}
 	return num;
@@ -76,29 +77,32 @@ int main(int argc, char const *argv[]){
 	// Iniciacion valores para las particulas 
 	for (int i = 0; i <fila; ++i){
 		//Inicializacion de parametros de coordenadas
-		matris[i][0] = numero_aleatorio(1000); //Coordenada X
-		matris[i][1] = numero_aleatorio(1000); //Coordenada Y
+		matriz[i][0] = numero_aleatorio(1000); //Coordenada X
+		matriz[i][1] = numero_aleatorio(1000); //Coordenada Y
 
 		//La mejor posicion inicial es la aleatoria ya que no se conoce otra 
-		matris[i][2] = matris[i][0]; //Coordenada de la mejor posicion de X
-		matris[i][3] = matris[i][1]; //Coordenada de la mejor posicion de Y
+		matriz[i][2] = matriz[i][0]; //Coordenada de la mejor posicion de X
+		matriz[i][3] = matriz[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matris[i][4] = numero_aleatorio(120);
-		matris[i][5] = numero_aleatorio(120);
+		matriz[i][4] = numero_aleatorio(120);
+		matriz[i][5] = numero_aleatorio(120);
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
 	for (int i = 0; i < fila; ++i){
-		double evaluacion = calcular_funcion(matris[i][0],matris[i][1]);
+		double evaluacion = calcular_funcion(matriz[i][0],matriz[i][1]);
 		printf("La evaluacion para %d dio: %f\n",i, evaluacion );
 		if (evaluacion < menor_global){
 			menor_global = evaluacion;
-			menor_X_global = matris[i][0];
-			menor_Y_global = matris[i][1];
+			menor_X_global = matriz[i][0];
+			menor_Y_global = matriz[i][1];
 		}
 	}
 
+	printf("-------------------------------------------\n");
+	imprimir();
+	printf("-------------------------------------------\n");
 
 
 	//Ciclo principal del algoritmo
@@ -109,61 +113,66 @@ int main(int argc, char const *argv[]){
 		{
 			
 			//Guardar las coordenadas de la particula i
-			coordenadas_X[i][cantidad_coordenadas - cantidad_iteraciones] = matris[i][0]; // OJO
-			coordenadas_Y[i][cantidad_coordenadas - cantidad_iteraciones] = matris[i][1];
+			coordenadas_X[i][cantidad_coordenadas - cantidad_iteraciones] = matriz[i][0]; // OJO
+			coordenadas_Y[i][cantidad_coordenadas - cantidad_iteraciones] = matriz[i][1];
 
 			//Prueba 
-			puntuaciones[i][cantidad_coordenadas - cantidad_iteraciones] = calcular_funcion(matris[i][0],matris[i][1]);
+			puntuaciones[i][cantidad_coordenadas - cantidad_iteraciones] = calcular_funcion(matriz[i][0],matriz[i][1]);
 
 
 
 			//Calcular la función para la posicion actual de la particula i
-			double evaluacion = calcular_funcion(matris[i][0],matris[i][1]);
+			double evaluacion = calcular_funcion(matriz[i][0],matriz[i][1]);
 
 			//Comprobacion con la mejor posicion de la particula i 
-			double mejor_eval = calcular_funcion(matris[i][2],matris[i][3]);
+			double mejor_eval = calcular_funcion(matriz[i][2],matriz[i][3]);
 			if(evaluacion < mejor_eval){
+				//printf("La particula %d encontro una mejor solucion.\n",i );
 				// Asignamos las coordenadas 
-				matris[i][2] = matris[i][0]; //Coordenada de la mejor posicion de X
-				matris[i][3] = matris[i][1]; //Coordenada de la mejor posicion de Y
+				matriz[i][2] = matriz[i][0]; //Coordenada de la mejor posicion de X
+				matriz[i][3] = matriz[i][1]; //Coordenada de la mejor posicion de Y
 			}
 
 			//Comprobacion con la mejor solucion global si no cambia la solucion global aumentar el contador de iteraciones de la solucion global
 			if(evaluacion < menor_global){
 				double diferencia_evaluaciones = menor_global - evaluacion; 
+				printf("Valores para calcular la diferencia, menor_global:%f, evaluacion: %f \n", menor_global, evaluacion );
 				printf("Diferencia de evaluaciones:%f\n",diferencia_evaluaciones );
-				if (diferencia_evaluaciones <= 0.0001){
+				//if (0.0001 >= diferencia_evaluaciones){
 					printf("Hola entre---------------------------\n");
 					menor_global = evaluacion;
-					menor_X_global = matris[i][0];
-					menor_Y_global = matris[i][1];
+					menor_X_global = matriz[i][0];
+					menor_Y_global = matriz[i][1];
 
 					//Ponemos en 0 la iteraciones desde que encontramos esta solucion para contar las 100 
 					iteraciones_mejor_solucion = 0;
-				} 
+				//} 
 
 			}
+
 			//Ajustar la velocidad de la particula i
-			matris[i][4] = coeficiente_inercia * matris[i][4] +
-				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (matris[i][2] - matris[i][0]) +
-				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (menor_X_global - matris[i][0]);
-			matris[i][5] = coeficiente_inercia*matris[i][5] +
-				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (matris[i][3] - matris[i][1]) +
-				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (menor_Y_global - matris[i][1]);
+			matriz[i][4] = coeficiente_inercia * matriz[i][4] +
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (matriz[i][2] - matriz[i][0]) +
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (menor_X_global - matriz[i][0]);
+			matriz[i][5] = coeficiente_inercia*matriz[i][5] +
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (matriz[i][3] - matriz[i][1]) +
+				coeficiente_aceleracion * ((double)rand()/(double)RAND_MAX) * (menor_Y_global - matriz[i][1]);
+
 			//Ajustar la posicion de la particula i
-			matris[i][0] = matris[i][0] + matris[i][4];
-			
-			matris[i][1] = matris[i][1] + matris[i][5];
-			while ((matris[i][0] > 1000)||(matris[i][0] < -1000)||(matris[i][1] > 1000) || (matris[i][1] < -1000)){
-				if(matris[i][0] > 1000){
-					matris[i][0] = matris[i][0] - 2000;
-				}else if (matris[i][0] < -1000){
-					matris[i][0] = matris[i][0] + 2000;
+			matriz[i][0] = matriz[i][0] + matriz[i][4];
+			matriz[i][1] = matriz[i][1] + matriz[i][5];
+
+			//Control de limites de la funcion
+			while ((matriz[i][0] > 1000)||(matriz[i][0] < -1000)||(matriz[i][1] > 1000) || (matriz[i][1] < -1000)){
+				if(matriz[i][0] > 1000){
+					matriz[i][0] = matriz[i][0] - 2000;
+				}else if (matriz[i][0] < -1000){
+					matriz[i][0] = matriz[i][0] + 2000;
 				}
-				if(matris[i][1] > 1000){
-					matris[i][1] = matris[i][1] - 2000;
-				}else if (matris[i][1] < -1000){
-					matris[i][1] = matris[i][1] + 2000;
+				if(matriz[i][1] > 1000){
+					matriz[i][1] = matriz[i][1] - 2000;
+				}else if (matriz[i][1] < -1000){
+					matriz[i][1] = matriz[i][1] + 2000;
 				}
 			}
 
