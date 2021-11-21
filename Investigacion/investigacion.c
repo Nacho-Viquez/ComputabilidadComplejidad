@@ -15,7 +15,7 @@ int cantidad_coordenadas = 500;
 
 int iteraciones_mejor_solucion = 0;
 double coeficiente_inercia = 0.73;
-double coeficiente_aceleracion = 2.025;
+double coeficiente_aceleracion = 2;
 double menor_X_global = 99999;
 double menor_Y_global = 99999;
 double menor_global = 9999.99;
@@ -85,8 +85,8 @@ int main(int argc, char const *argv[]){
 		matriz[i][3] = matriz[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matriz[i][4] = numero_aleatorio(120);
-		matriz[i][5] = numero_aleatorio(120);
+		matriz[i][4] = numero_aleatorio(20);
+		matriz[i][5] = numero_aleatorio(20);
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
