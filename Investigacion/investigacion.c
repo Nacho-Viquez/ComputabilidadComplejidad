@@ -21,7 +21,13 @@ double menor_Y_global = 99999;
 double menor_global = 9999.99;
 
 
+
+
 //Graficación
+double coordenadas_X[3][300] = {}; // Matriz de coordenadas
+double coordenadas_Y[3][300] = {}; // Matriz de coordenadas
+
+
 double coordinadas_X_particula_1[300] = {};
 double coordinadas_Y_particula_1[300] = {};
 
@@ -67,13 +73,11 @@ double calcular_funcion(int x,int y){
 }
 
 
-void escribir_archivo(FILE* fp,double valor)
+void escribir_archivo(FILE* fp,double valor_x, double valor_y)
 {
-
-
-	fprintf(fp, "%f\n", valor);
-
+	fprintf(fp, "%f %f\n", valor_x,valor_y);
 }
+
 
 
 int main(int argc, char const *argv[]){
@@ -110,7 +114,7 @@ int main(int argc, char const *argv[]){
 	while(cantidad_iteraciones != 0 ){
 		printf("Iteración: %d\n",cantidad_iteraciones );
 
-		//Graficación
+		/*
 		coordinadas_X_particula_1[cantidad_coordenadas - cantidad_iteraciones] = matris[0][0];
 		coordinadas_Y_particula_1[cantidad_coordenadas - cantidad_iteraciones] = matris[0][1];
 
@@ -125,12 +129,15 @@ int main(int argc, char const *argv[]){
 
 		coordinadas_X_particula_5[cantidad_coordenadas - cantidad_iteraciones] = matris[4][0];
 		coordinadas_Y_particula_5[cantidad_coordenadas - cantidad_iteraciones] = matris[4][1];
-
+		*/
 
 
 		for (int i = 0; i < fila; i++)
 		{
-			//Guardar posiciones
+			
+			//Guardar las coordenadas de la particula i
+			coordenadas_X[i][cantidad_coordenadas - cantidad_iteraciones] = matris[i][0]; // OJO
+			coordenadas_Y[i][cantidad_coordenadas - cantidad_iteraciones] = matris[i][1];
 
 
 
@@ -196,17 +203,33 @@ int main(int argc, char const *argv[]){
 	}
 
 
-	//Archivo
-	FILE* fp;
-	fp = fopen("prueba.txt","w");
-	for (int j = 0; j < cantidad_coordenadas; j++)
+	//Prueba de coordenadas
+	for (int i = 0; i < fila; i++)
 	{
-		escribir_archivo(fp,coordinadas_X_particula_1[j]);
+		for (int j = 0; j < cantidad_coordenadas; j++)
+		{
+			printf("coordenadas_X[%d][%d] = %lf \n",i,j, coordenadas_X[i][j]);
+			printf("coordenadas_Y[%d][%d] = %lf \n",i,j, coordenadas_Y[i][j]);
+		}
+		printf("-\n");
 	}
-	fclose(fp);		
 
-	printf("-\n");
+	// Creacion de archivos 
+	for (int i = 0; i < fila; ++i)
+	{
+		FILE* fp;
+		char nombreArchivo[20];
+		sprintf(nombreArchivo, "coordenadas_%d",i);
+		fp = fopen(nombreArchivo, "w");
+		for (int j = 0; j < cantidad_coordenadas; ++j)
+		{
+			escribir_archivo(fp,coordenadas_X[i][j], coordenadas_Y[i][j]);
+		}
+		fclose(fp);
+	}
+	
+	printf("----------------------\n");
 
-	imprimir();
+	//imprimir();
 	return 0;
 }
