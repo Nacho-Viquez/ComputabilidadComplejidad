@@ -38,19 +38,15 @@ double calcular_funcion(double x,double y){
 
 
 
-int imprimir(){
+int imprimir(int iteracion){
+	printf("Iteración:%d\n",iteracion );
+	printf("G = (%f, %f), F(G) = %f\n",menor_X_global, menor_Y_global ,menor_global);
 	for (int i = 0; i < fila; i++)
 	{
-		for (int j = 0; j < columna; j++)
-		{
-			printf("matriz[%d][%d] = %lf \n",i,j, matriz[i][j]);
-		}
-		printf("-\n");
+		double evaluacion = calcular_funcion(matriz[i][0], matriz[i][1]);
+		printf("X%d = (%f, %f), F(%d) = %f\n",i,matriz[i][0], matriz[i][1],i ,evaluacion);
 	}
-	printf("menor_X_global: %f\n",menor_X_global);
-	printf("menor_Y_global: %f\n",menor_Y_global);
-	double respuesta = calcular_funcion(menor_X_global,menor_Y_global);
-	printf("Menor evaluación: %f\n",respuesta );
+	printf("---------------\n");
 	return 0;
 }
 
@@ -89,10 +85,10 @@ int main(int argc, char const *argv[]){
 		matriz[i][5] = numero_aleatorio(10);
 	}
 
-	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
+	//Iniciar el valor de G con los valores anteriormente declarados  
 	for (int i = 0; i < fila; ++i){
 		double evaluacion = calcular_funcion(matriz[i][0],matriz[i][1]);
-		printf("La evaluacion para %d dio: %f\n",i, evaluacion );
+		//printf("La evaluacion para %d dio: %f\n",i, evaluacion );
 		if (evaluacion < menor_global){
 			menor_global = evaluacion;
 			menor_X_global = matriz[i][0];
@@ -100,15 +96,10 @@ int main(int argc, char const *argv[]){
 		}
 	}
 
-	printf("-------------------------------------------\n");
-	imprimir();
-	printf("-------------------------------------------\n");
-
-
 	//Ciclo principal del algoritmo
 	while(cantidad_iteraciones != 0 ){
-		printf("Iteración: %d\n",cantidad_iteraciones );
-
+		//printf("Iteración: %d\n",cantidad_iteraciones );
+		imprimir(cantidad_iteraciones);
 		for (int i = 0; i < fila; i++)
 		{
 			
@@ -138,10 +129,10 @@ int main(int argc, char const *argv[]){
 			if(evaluacion < menor_global){
 
 				double diferencia_evaluaciones = menor_global - evaluacion;
-				printf("Valores para calcular la diferencia, menor_global:%f, evaluacion: %f \n", menor_global, evaluacion );
-				printf("Diferencia de evaluaciones:%f\n",diferencia_evaluaciones );
+				//printf("Valores para calcular la diferencia, menor_global:%f, evaluacion: %f \n", menor_global, evaluacion );
+				//printf("Diferencia de evaluaciones:%f\n",diferencia_evaluaciones );
 				if (0.0001 <= diferencia_evaluaciones){
-					printf("Hola entre---------------------------\n");
+					//printf("Hola entre---------------------------\n");
 					menor_global = evaluacion;
 					menor_X_global = matriz[i][0];
 					menor_Y_global = matriz[i][1];
@@ -222,6 +213,6 @@ int main(int argc, char const *argv[]){
 		fclose(fp);
 	}
 
-	imprimir();
+	//imprimir();
 	return 0;
 }
