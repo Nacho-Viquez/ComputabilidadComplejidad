@@ -6,8 +6,8 @@
 #include <math.h>
 
 
-double matriz[3][6] = {};
-int fila = 3;
+double matriz[5][6] = {};
+int fila = 5;
 int columna = 6;
 int seed = 10395922; // Numero aleatorio para los numeros generados 
 int cantidad_iteraciones = 500;
@@ -24,11 +24,11 @@ double menor_global = 9999.99;
 
 
 //Graficación
-double coordenadas_X[3][500] = {}; // Matriz de coordenadas
-double coordenadas_Y[3][500] = {}; // Matriz de coordenadas
+double coordenadas_X[5][500] = {}; // Matriz de coordenadas
+double coordenadas_Y[5][500] = {}; // Matriz de coordenadas
 
 //Prueba 
-double puntuaciones[3][500] = {};
+double puntuaciones[5][500] = {};
 
 
 double calcular_funcion(double x,double y){
@@ -85,8 +85,8 @@ int main(int argc, char const *argv[]){
 		matriz[i][3] = matriz[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matriz[i][4] = numero_aleatorio(20);
-		matriz[i][5] = numero_aleatorio(20);
+		matriz[i][4] = numero_aleatorio(10);
+		matriz[i][5] = numero_aleatorio(10);
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados --OJO! 
@@ -134,11 +134,13 @@ int main(int argc, char const *argv[]){
 			}
 
 			//Comprobacion con la mejor solucion global si no cambia la solucion global aumentar el contador de iteraciones de la solucion global
+			
 			if(evaluacion < menor_global){
-				double diferencia_evaluaciones = menor_global - evaluacion; 
+
+				double diferencia_evaluaciones = menor_global - evaluacion;
 				printf("Valores para calcular la diferencia, menor_global:%f, evaluacion: %f \n", menor_global, evaluacion );
 				printf("Diferencia de evaluaciones:%f\n",diferencia_evaluaciones );
-				//if (0.0001 >= diferencia_evaluaciones){
+				if (0.0001 <= diferencia_evaluaciones){
 					printf("Hola entre---------------------------\n");
 					menor_global = evaluacion;
 					menor_X_global = matriz[i][0];
@@ -146,7 +148,7 @@ int main(int argc, char const *argv[]){
 
 					//Ponemos en 0 la iteraciones desde que encontramos esta solucion para contar las 100 
 					iteraciones_mejor_solucion = 0;
-				//} 
+				} 
 
 			}
 
