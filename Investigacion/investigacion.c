@@ -6,15 +6,15 @@
 #include <math.h>
 
 
-double matriz[5][6] = {};
-int fila = 5;
+double matriz[10][6] = {};
+int fila = 10;
 int columna = 6;
 int seed = 10395922; // Numero aleatorio para los numeros generados 
-int cantidad_iteraciones = 500;
-int cantidad_coordenadas = 500;
+int cantidad_iteraciones = 1500;
+int cantidad_coordenadas = 1500;
 
 int iteraciones_mejor_solucion = 0;
-double coeficiente_inercia = 0.73;
+double coeficiente_inercia = 0.50;
 double coeficiente_aceleracion = 2;
 double menor_X_global = 99999;
 double menor_Y_global = 99999;
@@ -24,11 +24,10 @@ double menor_global = 9999.99;
 
 
 //Graficación
-double coordenadas_X[5][500] = {}; // Matriz de coordenadas
-double coordenadas_Y[5][500] = {}; // Matriz de coordenadas
+double coordenadas_X[10][1500] = {}; // Matriz de coordenadas
+double coordenadas_Y[10][1500] = {}; // Matriz de coordenadas
 
-//Prueba 
-double puntuaciones[5][500] = {};
+
 
 
 double calcular_funcion(double x,double y){
@@ -53,7 +52,6 @@ int imprimir(int iteracion){
 double numero_aleatorio(int rango){
 	double num = rand() % rango;
 	double negativo = (double)rand() / (double)RAND_MAX;
-	//printf("Probabilidad de numero negativo es: %f\n",negativo );
 	if (negativo <= 0.5){
 		num = num * -1;
 	}
@@ -81,14 +79,13 @@ int main(int argc, char const *argv[]){
 		matriz[i][3] = matriz[i][1]; //Coordenada de la mejor posicion de Y
 
 		//Inicializacion de parametros de velocidad de las particulas 
-		matriz[i][4] = numero_aleatorio(10);
-		matriz[i][5] = numero_aleatorio(10);
+		matriz[i][4] = numero_aleatorio(20);
+		matriz[i][5] = numero_aleatorio(20);
 	}
 
 	//Iniciar el valor de G con los valores anteriormente declarados  
 	for (int i = 0; i < fila; ++i){
 		double evaluacion = calcular_funcion(matriz[i][0],matriz[i][1]);
-		//printf("La evaluacion para %d dio: %f\n",i, evaluacion );
 		if (evaluacion < menor_global){
 			menor_global = evaluacion;
 			menor_X_global = matriz[i][0];
@@ -98,7 +95,6 @@ int main(int argc, char const *argv[]){
 
 	//Ciclo principal del algoritmo
 	while(cantidad_iteraciones != 0 ){
-		//printf("Iteración: %d\n",cantidad_iteraciones );
 		imprimir(cantidad_iteraciones);
 		for (int i = 0; i < fila; i++)
 		{
@@ -107,10 +103,6 @@ int main(int argc, char const *argv[]){
 			coordenadas_X[i][cantidad_coordenadas - cantidad_iteraciones] = matriz[i][0]; // OJO
 			coordenadas_Y[i][cantidad_coordenadas - cantidad_iteraciones] = matriz[i][1];
 
-			//Prueba 
-			puntuaciones[i][cantidad_coordenadas - cantidad_iteraciones] = calcular_funcion(matriz[i][0],matriz[i][1]);
-
-
 
 			//Calcular la función para la posicion actual de la particula i
 			double evaluacion = calcular_funcion(matriz[i][0],matriz[i][1]);
@@ -118,7 +110,6 @@ int main(int argc, char const *argv[]){
 			//Comprobacion con la mejor posicion de la particula i 
 			double mejor_eval = calcular_funcion(matriz[i][2],matriz[i][3]);
 			if(evaluacion < mejor_eval){
-				//printf("La particula %d encontro una mejor solucion.\n",i );
 				// Asignamos las coordenadas 
 				matriz[i][2] = matriz[i][0]; //Coordenada de la mejor posicion de X
 				matriz[i][3] = matriz[i][1]; //Coordenada de la mejor posicion de Y
@@ -129,10 +120,7 @@ int main(int argc, char const *argv[]){
 			if(evaluacion < menor_global){
 
 				double diferencia_evaluaciones = menor_global - evaluacion;
-				//printf("Valores para calcular la diferencia, menor_global:%f, evaluacion: %f \n", menor_global, evaluacion );
-				//printf("Diferencia de evaluaciones:%f\n",diferencia_evaluaciones );
 				if (0.0001 <= diferencia_evaluaciones){
-					//printf("Hola entre---------------------------\n");
 					menor_global = evaluacion;
 					menor_X_global = matriz[i][0];
 					menor_Y_global = matriz[i][1];
@@ -199,20 +187,6 @@ int main(int argc, char const *argv[]){
 		fclose(fp);
 	}
 	
-	//Prueba
-	for (int i = 0; i < fila; ++i)
-	{
-		FILE* fp;
-		char nombreArchivo[20];
-		sprintf(nombreArchivo, "prueba_%d",i);
-		fp = fopen(nombreArchivo, "w");
-		for (int j = 0; j < cantidad_coordenadas; ++j)
-		{
-			fprintf(fp, "%f \n", puntuaciones[i][j]);
-		}
-		fclose(fp);
-	}
 
-	//imprimir();
 	return 0;
 }
