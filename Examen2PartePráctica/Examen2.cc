@@ -84,19 +84,21 @@ int main(int argc, char const *argv[])
 
 
 	// Creacion de hormigas
-	for (int i = 0; i < 5; ++i)
+	for (int i = 0; i < cantidad_hormigas; ++i)
 	{
 		Hormiga nueva;
+		nueva.setNodo(0);
 		hormigas.push_back(nueva);	
 	}
-	/*
+	
+	//PRUEBA: Impresion del contenido del arreglo de hormigas asi con el valor inicial de cada hormiga
 	for (int i = 0; i < hormigas.size(); ++i)
 	{
-		printf("Soy la hormiga:%d\n", i);
+		printf("Hola mundo soy la hormiga %d, y este es mi camino a la comida:\n", i);
 		hormigas[i].imprimir();
 		printf("-----------------------\n");
 	}
-	*/
+	
 	
 	return 0;
 }
