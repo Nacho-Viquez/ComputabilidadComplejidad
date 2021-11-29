@@ -1,5 +1,7 @@
 #include <cstdio>
 #include "vector"
+#include <algorithm>
+
 using namespace std;
 
 class Hormiga {
@@ -11,8 +13,10 @@ class Hormiga {
       int getRetroceso();
       int setNodo(int nodo);
       int setRetroceso(int retro);
+      int getCantidadNodosVisitados();
+      vector<int> getCamino();
    private: 
       vector<int> camino_comida;
-      int retroceso; // Bandera que indica si la hormiga va hacia la comida o de regreso
+      int retroceso = 0; // Bandera que indica si la hormiga va hacia la comida o de regreso
 
 };
