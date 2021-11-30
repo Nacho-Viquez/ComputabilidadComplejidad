@@ -17,8 +17,10 @@ vector<vector<double>> cantidad_feromona;
 vector<int> mejor_solucion;
 int cantidad_nodos_mejor_solucion = 30;
 int hormiga_mejor_camino ;
+int iteracion_solucion;
+int iteraciones_mejor_solucion ;
 
-int cantidad_hormigas = 5;
+int cantidad_hormigas = 11;
 int cantidad_iterciones = 10000;
 int seed(559642);
 double factor_evaporacion = 0.02;
@@ -159,6 +161,8 @@ int main(int argc, char const *argv[])
 						cantidad_nodos_mejor_solucion = hormigas[i].getCantidadNodosVisitados();
 						mejor_solucion = hormigas[i].getCamino();
 						hormiga_mejor_camino = i;
+						iteraciones_mejor_solucion = 1;
+						iteracion_solucion = iteraciones;
 					}
 					
 					hormigas[i].setRetroceso(1);
@@ -213,14 +217,21 @@ int main(int argc, char const *argv[])
 			}
 		}
 		
+		iteraciones_mejor_solucion++;
 		iteraciones++;
+		if(iteraciones_mejor_solucion == 150)
+		{	
+			printf("Se realizaron %d iteraciones.\n", iteraciones);
+			iteraciones = cantidad_iterciones;
+		}
 	}
-
+	printf("---Resultados---\n");
 	printf("La el mejor camino fue encontrado por la hormiga: %d y es el siguiente:\n", hormiga_mejor_camino );
 	for (int i = 0; i < mejor_solucion.size(); ++i)
 	{
 		printf("Nodo: %d\n",mejor_solucion[i] );
 	}
+	printf("Esta mejor_solucion se encontro en la iteracion: %d\n",iteracion_solucion );
 
 
 	//PRUEBA: Impresion del contenido del arreglo de hormigas 
