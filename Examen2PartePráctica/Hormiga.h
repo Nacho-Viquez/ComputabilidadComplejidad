@@ -15,6 +15,7 @@ class Hormiga {
       int setRetroceso(int retro);
       int getCantidadNodosVisitados();
       vector<int> getCamino();
+      int eliminarUltimo();
    private: 
       vector<int> camino_comida;
       int retroceso = 0; // Bandera que indica si la hormiga va hacia la comida o de regreso

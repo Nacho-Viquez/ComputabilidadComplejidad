@@ -14,13 +14,15 @@ using namespace std;
 vector<Hormiga> hormigas;
 vector<vector<int>> grafo;
 vector<vector<double>> cantidad_feromona;
-vector<char> mejor_solucion;
-int cantidad_nodos_mejor_solucion = 1;
+vector<int> mejor_solucion;
+int cantidad_nodos_mejor_solucion = 30;
+int hormiga_mejor_camino ;
 
 int cantidad_hormigas = 5;
-int cantidad_iterciones = 220;
-int seed(51459642);
-double factor_evaporacion = 0.7;
+int cantidad_iterciones = 10000;
+int seed(559642);
+double factor_evaporacion = 0.02;
+double feromona = 0.04;
 
 
 
@@ -75,6 +77,7 @@ int main(int argc, char const *argv[])
 	}
 
 	//PRUEBA: Impresion del contenido del grafo
+	/*
 	for (int i = 0; i < grafo.size(); ++i)
 	{
 		printf("El nodo %d tiene de vecino a:\n",i );
@@ -84,7 +87,7 @@ int main(int argc, char const *argv[])
 		}
 		printf("----------------------------------\n");
 	}
-
+	*/
 
 
 
@@ -100,13 +103,14 @@ int main(int argc, char const *argv[])
 
 
 	//PRUEBA: Impresion del contenido del arreglo de hormigas asi con el valor inicial de cada hormiga
+	/*
 	for (int i = 0; i < hormigas.size(); ++i)
 	{
 		printf("Hola mundo soy la hormiga %d, y este es mi camino a la comida:\n", i);
 		hormigas[i].imprimir();
 		printf("-----------------------\n");
 	}
-
+	*/
 
 
 	//ciclo principal 
@@ -116,11 +120,13 @@ int main(int argc, char const *argv[])
 		//Ciclo interno de movimiento de las hormigas 
 		for (int i = 0; i < hormigas.size(); ++i)
 		{	
+			int nodo_actual = hormigas[i].getUltimoNodo();
 			//Revisar si la hormiga se regresa o va de camino a la comida
 			if(hormigas[i].getRetroceso() == 0)
-			{
+			{	
+				//printf("Soy la hormiga %d y voy buscando la comida\n",i );
 				//Decidir el movimiento de las hormigas 
-				int nodo_actual = hormigas[i].getUltimoNodo();
+				
 				double seleccion_camino = (double)rand() / (double)RAND_MAX;
 				vector<int> posibles_caminos;
 
@@ -151,8 +157,17 @@ int main(int argc, char const *argv[])
 				int siguiente_nodo = grafo[nodo_actual][indice_escogido];
 				hormigas[i].setNodo(siguiente_nodo);
 
-				//Depositar feromonas en el camino usado
+				//Depositar feromonas en el camino usado en ambas entradas del grafo
 				cantidad_feromona[nodo_actual][indice_escogido] = cantidad_feromona[nodo_actual][indice_escogido] + 0.03;
+				
+				for (int k = 0; k < grafo[siguiente_nodo].size(); ++k)
+				{
+					if(grafo[siguiente_nodo][k] == nodo_actual)
+					{
+						cantidad_feromona[siguiente_nodo][k] = cantidad_feromona[siguiente_nodo][k] + 0.03;
+					}
+				}
+
 
 				//Revisar si se llego a la comida 
 				if (hormigas[i].getUltimoNodo() == 1)
@@ -160,21 +175,50 @@ int main(int argc, char const *argv[])
 					printf("Soy la hormiga %d y llegue a la comida:\n", i);
 					//La hormiga llego al final 
 					hormigas[i].imprimir();
-					/*
+					
 					if(cantidad_nodos_mejor_solucion > hormigas[i].getCantidadNodosVisitados())
 					{
 						// Encontramos una mejor solucion.
 						cantidad_nodos_mejor_solucion = hormigas[i].getCantidadNodosVisitados();
 						mejor_solucion = hormigas[i].getCamino();
+						hormiga_mejor_camino = i;
 					}
-					*/
+					
 					hormigas[i].setRetroceso(1);
 				}
 			}
 			else
 			{
 				//La hormiga va de regreso
-				printf("Hola voy paraatras\n");
+				//printf("Hola soy la hormiga %d y voy para atras:\n",i);
+				if(nodo_actual != 0)
+				{	
+					//Eliminamos del camino el ultimo(actual)
+					hormigas[i].eliminarUltimo();
+					int nodo_anterior = hormigas[i].getUltimoNodo();// ya deberia de haber cambiado
+					//Depositar feromonas.
+					for (int k = 0; k < grafo[nodo_actual].size(); ++k)
+					{
+						if(grafo[nodo_actual][k] == nodo_anterior)
+						{
+							cantidad_feromona[nodo_actual][k] = cantidad_feromona[nodo_actual][k] + 0.03;
+						}
+					}
+					for (int k = 0; k < grafo[nodo_anterior].size(); ++k)
+					{
+						if(grafo[nodo_anterior][k] == nodo_actual)
+						{
+							cantidad_feromona[nodo_anterior][k] = cantidad_feromona[nodo_anterior][k] + 0.03;
+						}
+					}
+
+				}
+				else
+				{
+					//La hormiga llego al inicio y ha de regresar a buscar comida.
+					hormigas[i].setRetroceso(0);
+				}
+
 			}
 		}
 
@@ -191,12 +235,15 @@ int main(int argc, char const *argv[])
 				}
 			}
 		}
-
 		printf("--------------------------------\n");
 		iteraciones++;
 	}
 
-
+	printf("La el mejor camino fue encontrado por la hormiga: %d y es el siguiente:\n", hormiga_mejor_camino );
+	for (int i = 0; i < mejor_solucion.size(); ++i)
+	{
+		printf("Nodo: %d\n",mejor_solucion[i] );
+	}
 
 
 	//PRUEBA: Impresion del contenido del arreglo de hormigas 
@@ -211,6 +258,7 @@ int main(int argc, char const *argv[])
 
 
 	//PRUEBA: Impresion del contenido del grafo
+	/*
 	for (int i = 0; i < grafo.size(); ++i)
 	{
 		printf("El nodo %d tiene de vecino a:\n",i );
@@ -220,6 +268,7 @@ int main(int argc, char const *argv[])
 		}
 		printf("----------------------------------\n");
 	}
+	*/
 
 
 	

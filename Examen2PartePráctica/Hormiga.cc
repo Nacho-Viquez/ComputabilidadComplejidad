@@ -62,3 +62,8 @@ vector<int> Hormiga::getCamino(){
 
 	return camino_comida;
 }
+
+int Hormiga::eliminarUltimo(){
+	camino_comida.pop_back();
+	return 0;
+}
